@@ -21,10 +21,34 @@ npm run check
 python3 -m http.server 8000 --directory dist
 ```
 
-Netlify: Build `npm run build`, Veröffentlichungsverzeichnis `dist`; siehe
-`netlify.toml`. Die Netlify-Site soft-empanada-97cf3d verwendet den Production-
-Branch `main`. Ein Push kann dort ein Deployment auslösen. Die originale Website
-ausserhalb dieses Repositorys ist nicht Bestandteil dieser Implementierung.
+## GitHub-Pages-Demo
+
+Der Workflow `.github/workflows/pages.yml` baut und prüft jeden Push auf `main`
+und veröffentlicht das Ergebnis mit GitHub Pages. Über `workflow_dispatch` kann
+auch ohne Codeänderung neu veröffentlicht werden. Überholte Läufe werden
+abgebrochen. Es werden keine eigenen Zugangsdaten benötigt; der Workflow nutzt
+das von GitHub bereitgestellte, auf Pages beschränkte Job-Token.
+
+Einmalig im Repository unter **Settings → Pages → Build and deployment → Source**
+**GitHub Actions** auswählen. Für kostenlose Nutzung mit GitHub Free muss das
+Repository öffentlich sein; dieser Workflow ändert keine Sichtbarkeit.
+
+Vorgesehene Projektadresse (ohne eigene Domain):
+`https://luluethi.github.io/coiffure-luethi-website/`
+
+`actions/configure-pages` liefert den tatsächlichen Unterpfad. Der Build setzt
+`BASE_PATH` nur für die Ausgabedateien; die Quelldateien bleiben unverändert
+unter einer Domain-Wurzel nutzbar. Projektpfade lassen sich lokal prüfen:
+
+```sh
+BASE_PATH=/coiffure-luethi-website npm run build
+BASE_PATH=/coiffure-luethi-website npm run check
+```
+
+Netlify bleibt kompatibel: Build `npm run build`, Ausgabe `dist`, ohne BASE_PATH.
+Das Netlify-Projekt und die ursprüngliche Salon-Website werden durch die
+Pages-Einrichtung nicht gelöscht oder verändert. Das Netlify-Projekt kann nach
+einem erfolgreich geprüften Pages-Deployment separat entfernt werden.
 
 ## Inhalte und Gestaltung
 

@@ -3,9 +3,23 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import re
+import os
 import xml.etree.ElementTree as ET
 
 ROOT = Path('dist')
+BASE_PATH = os.environ.get('BASE_PATH', '').rstrip('/')
+
+def resolve_local(url_path, source):
+    path = unquote(url_path)
+    if not path:
+        return source
+    if path.startswith('/'):
+        if BASE_PATH:
+            assert path.startswith(BASE_PATH + '/'), f'URL outside deployment path: {path}'
+            path = path[len(BASE_PATH):]
+        return ROOT / path.lstrip('/')
+    return source.parent / path
+
 
 class Page(HTMLParser):
     def __init__(self, text):
@@ -36,7 +50,7 @@ for path in pages:
         url = urlsplit(ref)
         if url.scheme or url.netloc:
             continue
-        target = ROOT / unquote(url.path).lstrip('/') if url.path.startswith('/') else path.parent / unquote(url.path) if url.path else path
+        target = resolve_local(url.path, path)
         if target.is_dir():
             target /= 'index.html'
         assert target.is_file(), f'{path}: missing {ref}'
@@ -45,7 +59,7 @@ for path in pages:
         count += 1
 for css in (ROOT / 'assets').glob('*.css'):
     for url in re.findall(r'url\([\'"]?([^\)\'\"]+)', css.read_text()):
-        target = ROOT / url.lstrip('/') if url.startswith('/') else css.parent / url
+        target = resolve_local(url, css)
         assert target.is_file(), f'Missing CSS resource: {url}'
 for svg in [ROOT / 'assets/luethi.svg', *sorted((ROOT / 'assets/brand').glob('*.svg'))]:
     tree = ET.parse(svg)

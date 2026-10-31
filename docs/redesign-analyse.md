@@ -97,3 +97,17 @@ dieses Reworks vom Auftraggeber erlaubt.
 - Alle drei Logo-PNGs mit 2000 × 829 Pixeln und transparentem Hintergrund geprüft.
 - Desktop-, Tablet- und Smartphoneansichten visuell geprüft; die Tablet-Proportionen
   des Einstiegs wurden nach dieser Kontrolle nochmals angepasst.
+
+
+## Wechsel der Demo zu GitHub Pages
+
+Der Pages-Workflow baut `main`, prüft alle lokalen Verweise und veröffentlicht
+per GitHub Actions. Neue Läufe ersetzen überholte Läufe. Die Projekt-URL mit
+Unterverzeichnis wird über BASE_PATH im Build unterstützt; Netlify- und lokale
+Builds bleiben ohne Präfix nutzbar. Beide Buildvarianten und die Projektpfad-
+Version im Browser (vier Seiten, 390/1440 Pixel, Schriften, Bilder, Navigation,
+Preisanker, Details, Galerie und ohne JavaScript) wurden erfolgreich geprüft.
+Die einmalige Aktivierung in GitHub Settings → Pages kann wegen des gesperrten
+GitHub-API-Zugriffs nicht durch den Agenten vorgenommen werden. Repo-Sichtbarkeit
+wird nicht geändert. Ein tatsächliches GitHub-Deployment muss gesondert bestätigt
+werden; lokale Tests belegen noch keine veröffentlichte Demo.
