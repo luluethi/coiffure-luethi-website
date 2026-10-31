@@ -53,3 +53,18 @@
 .salon-tiles figure:nth-child(2) img{height:475px}
 .salon-tiles figure:nth-child(4) img{object-position:center 25%}
 @media(max-width:760px){.hero-original-mark{padding:9px 13px;margin:18px 0 24px;max-width:80vw}.hero-original-mark img{height:67px;width:260px}.experience-content h1{font-size:clamp(30px,7vw,45px)}.experience-hero{min-height:650px}.editorial-intro,.service-row{grid-template-columns:1fr;gap:24px}.editorial-intro{padding-top:70px;padding-bottom:70px}.editorial-intro h2{font-size:clamp(44px,10vw,65px)}.editorial-intro p,.editorial-services p{font-size:16px}.editorial-services{padding:70px 0}.salon-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.salon-tiles figure:first-child{grid-column:span 2}.salon-tiles figure:first-child img{height:300px}.salon-tiles figure:nth-child(2) img{height:220px}.salon-tiles figure img{height:220px}}
+
+/* Authentic Lüthi script: only the yellow lettering from supplied image */
+.brand{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;width:195px;min-width:0}
+.brand .brand-coiffure{font:600 10px 'DM Sans',sans-serif;letter-spacing:.42em;color:var(--ink);padding-left:10px;margin-bottom:-2px}
+.brand img{width:160px;height:61px;object-fit:contain;object-position:left center;image-rendering:auto}
+.hero-original-mark{display:inline-flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;max-width:min(490px,90vw);margin:15px 0 26px}
+.hero-original-mark .brand-coiffure{font:600 18px 'DM Sans',sans-serif;letter-spacing:.48em;color:#fff;margin-left:13px}
+.hero-original-mark img{height:150px;width:410px;max-width:100%;object-fit:contain;object-position:left center;mix-blend-mode:normal;filter:drop-shadow(0 8px 22px #0005)}
+.team-teaser-layout{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}
+.team-teaser-copy h2{margin:20px 0 22px}
+.team-teaser-copy p{color:var(--muted);font-size:16px;line-height:1.85}
+.team-teaser-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
+.team-teaser-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.team-teaser-photos img:nth-child(2){transform:translateY(28px)}
+@media(max-width:760px){.brand{width:155px}.brand img{width:140px;height:42px}.brand .brand-coiffure{font-size:9px;letter-spacing:.32em}.hero-original-mark img{width:270px;height:105px}.hero-original-mark .brand-coiffure{font-size:12px;letter-spacing:.4em}.team-teaser-layout{grid-template-columns:1fr;gap:27px}.team-teaser-photos img:nth-child(2){transform:translateY(13px)}}
