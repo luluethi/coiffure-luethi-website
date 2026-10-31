@@ -1,7 +1,7 @@
 # Coiffure Lüthi — Familienbetrieb in Wohlen seit 1987
 
 Vier statische Seiten: Startseite, Leistungen & Preise, Team und Salon.
-Gemeinsames Designsystem mit lokal geladenen Schriften, dem gelben Lüthi-Logo
+Dunkles Designsystem mit kräftiger Manrope-Typografie, dem gelben Lüthi-Logo
 und optimierten Originalbildern. Keine kostenpflichtigen Dienste, kein Framework
 und keine Paketinstallation für Build oder Betrieb.
 
@@ -60,12 +60,12 @@ vorhandenen Repository. Preise behalten ihren sichtbaren Bestätigungsvorbehalt.
 Rechtliche Angaben müssen vor einem offiziellen Domainwechsel ergänzt werden.
 
 Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Das Gruppenbild
-`assets/TeamBild.jpg` steht auf Start- und Teamseite; optimierte WebP-Dateien
+`assets/TeamBild.jpg` steht im Einstieg der Startseite; optimierte WebP-Dateien
 unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert. Frisurenbilder
 werden als Inspiration aus der bestehenden Sammlung gekennzeichnet. Original-
 JPG-Dateien bleiben erhalten; die Website verwendet WebP-Versionen.
 
-Manrope und Cormorant Garamond werden lokal geladen. Die SIL-OFL-Lizenzen liegen
+Manrope wird lokal in 400, 600 und 800 geladen. Die SIL-OFL-Lizenz liegt
 unter `assets/fonts`. Keine Anfragen an externe Font-Dienste, keine Tracker und
 keine eingebettete Karte. Google Maps öffnet nur nach Klick einen externen Link.
 
@@ -84,3 +84,8 @@ reduzierte Bewegung und ohne JavaScript sichtbare Inhalte/Navigation. Die
 Salon-Galerie nutzt einen nativen Dialog mit Escape-Taste und Fokusrückgabe;
 ohne JavaScript öffnen die Bildlinks direkt das Originalbild. Terminvereinbarung
 führt direkt zu `tel:+41566226040`.
+
+Die Startseite umfasst Einstieg, Leistungen, Salon und Kontakt. Die Geschichte
+steht einmal im Einstieg; die Einzelporträts befinden sich ausschliesslich auf
+der Teamseite. Die gewählte dunkle Gestaltungsrichtung ist in der Analyse
+dokumentiert.
