@@ -1,7 +1,7 @@
 # Coiffure Lüthi — Familienbetrieb in Wohlen seit 1987
 
 Vier statische Seiten: Startseite, Leistungen & Preise, Team und Salon.
-Dunkles Designsystem mit kräftiger Manrope-Typografie, dem gelben Lüthi-Logo
+Bildbetonter dunkler Auftritt mit animiertem Lüthi-Schriftzug, lokaler Manrope-Typografie
 und optimierten Originalbildern. Keine kostenpflichtigen Dienste, kein Framework
 und keine Paketinstallation für Build oder Betrieb.
 
@@ -60,7 +60,7 @@ vorhandenen Repository. Preise behalten ihren sichtbaren Bestätigungsvorbehalt.
 Rechtliche Angaben müssen vor einem offiziellen Domainwechsel ergänzt werden.
 
 Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Das Gruppenbild
-`assets/TeamBild.jpg` steht im Einstieg der Startseite; optimierte WebP-Dateien
+`assets/TeamBild.jpg` steht im Teamabschnitt der Startseite; optimierte WebP-Dateien
 unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert. Frisurenbilder
 werden als Inspiration aus der bestehenden Sammlung gekennzeichnet. Original-
 JPG-Dateien bleiben erhalten; die Website verwendet WebP-Versionen.
@@ -85,7 +85,18 @@ Salon-Galerie nutzt einen nativen Dialog mit Escape-Taste und Fokusrückgabe;
 ohne JavaScript öffnen die Bildlinks direkt das Originalbild. Terminvereinbarung
 führt direkt zu `tel:+41566226040`.
 
-Die Startseite umfasst Einstieg, Leistungen, Salon und Kontakt. Die Geschichte
-steht einmal im Einstieg; die Einzelporträts befinden sich ausschliesslich auf
-der Teamseite. Die gewählte dunkle Gestaltungsrichtung ist in der Analyse
-dokumentiert.
+## Bildsprache und Animationen
+
+Der Einstieg zeigt drei manuell wechselbare Original-Salonansichten hinter dem
+grossen gelben Schriftzug. Darauf folgen Team, Leistungen und der direkte Link
+zu [@coiffureluethi](https://www.instagram.com/coiffureluethi/). Es werden keine
+Instagram-Posts nachgebaut und keine KI-Porträts ausgeliefert.
+
+Scroll-Einblendungen, Bildmaske, Hintergrundversatz und Seitenübergänge ergänzen
+die Gestaltung. Animationen lassen sich im Footer pausieren; die lokale Präferenz
+bleibt erhalten. Reduzierte Bewegung des Betriebssystems hat Vorrang. Die Galerie
+unterstützt Vor/Zurück, Pfeiltasten und Escape.
+
+Der Build versieht CSS und JavaScript mit einem Inhalts-Hash im Dateinamen.
+Dadurch erhält ein neues Deployment neue Asset-URLs, ohne Quelldateinamen oder
+lokale Entwicklung zu verändern.

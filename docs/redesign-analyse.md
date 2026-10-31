@@ -1,76 +1,70 @@
-# Aktuelles Designsystem — dunkel und markant
+# Coiffure Lüthi — animierter, bildbetonter Auftritt
 
-## Auftrag und Entscheidung
+## Inhaltliche Grundlage
 
-Coiffure Lüthi ist ein Familienbetrieb in Wohlen seit 1987, mit vielen
-langjährigen Kundinnen und Kunden. Die Ansprache der Website ist Sie.
-Team, Salon und Kontaktdaten sind echt; Preise und Rollen stammen aus dem
-vorhandenen Repository. Zusätzliche Spezialisierungen, Bewertungen oder
-biografische Angaben werden nicht erfunden.
+Familienbetrieb in Wohlen seit 1987. Die Website verwendet Sie und beschreibt
+konkret Team, Räume, Leistungen und Kontakt. Preise, Rollen und Kontaktdaten
+stammen aus dem vorhandenen Repository. Keine neuen Spezialisierungen,
+Bewertungen oder biografischen Angaben werden erfunden.
 
-Nach dem Review empfand der Auftraggeber den hellen, serifenbetonten Entwurf als
-zu langweilig und wiederholend. Gewählt wurde ausdrücklich die Richtung B:
-dunkel, markant und atmosphärisch. Diese Entscheidung gilt für alle vier Seiten.
+## Gestalterische Entscheidung
 
-## Gestalterische Regeln
+Der Auftraggeber hat die dunkle Richtung gewählt und anschliessend mehr
+Eigenständigkeit, Bildwirkung und Bewegung gewünscht. Der aktuelle Aufbau
+ersetzt das übliche Text-links/Bild-rechts-Muster des Einstiegs durch einen
+bildfüllenden Original-Salonblick mit dem grossen gelben Lüthi-Schriftzug.
 
-- Anthrazit `#171916` als Hintergrund, `#22251F` für zurückhaltende Flächen.
-- Helle Schrift `#F4F4ED`, lesbare Nebeninformationen `#B9BDB1`.
-- Gelb `#FFDF00` für den bekannten Lüthi-Schriftzug, zentrale Handlungen und
-  wenige Akzente. Keine zusätzliche Bildmarke, Schatten im Logo oder COIFFURE-Zeile.
-- Manrope, lokal geladen in 400/600/800. Kräftige aufrechte Überschriften und
-  grössere Informationstexte ersetzen die dünnen kursiven Überschriften.
-- Breite Originalbilder, offene Flächen und klare Linien statt dekorativer
-  Bildplaketten, nummerierter Personen und gleichförmiger Modebild-Karten.
-- Dezente Einblendungen und Hovereffekte, bei reduzierter Bewegung deaktiviert.
-- Team und Salon bleiben Originalfotografien; keine KI-Veränderung der Menschen
-  oder Räumlichkeiten. Die Modebilder stehen nur in der Inspirationsgalerie.
+Die anschliessende Teamsektion zeigt das echte Gruppenfoto. Ein heller Abschnitt
+mit grossen Leistungsbegriffen schafft einen bewussten Kontrast zur dunklen
+Bildwelt. Der Instagram-Verweis führt zu dem bestätigten Profil
+https://www.instagram.com/coiffureluethi/. Er ist ein externer Profil-Link,
+kein automatisch importierter Feed und keine nachgebaute Beitragsansicht.
 
-## Inhaltsdisziplin und Seitenaufbau
+Die Familie/Geschichte erscheint einmal im Einstieg. Keine zusätzlichen
+Geschichtsblöcke, nummerierten Personen oder doppelten Porträtlisten auf der
+Startseite. Team, Preisseite und Galerie verwenden dieselben Schriften,
+Farben, Verlinkungen, Animationen und Kontaktformen.
 
-Startseite: Einstieg mit Gruppenbild, Leistungen, Salon-Einblick, Kontakt.
-Der Begriff Familienbetrieb erscheint nur einmal sichtbar, zusammen mit 1987
-im Einstieg. Der grosse Jahreszahlenblock und alle Einzelporträts wurden von
-der Startseite entfernt. Die Teamseite enthält die fünf echten Porträts ohne
-Nummerierung und ohne einen weiteren Geschichtsblock.
+## Bilder und Echtheit
 
-Leistungen führen zu Damen, Herren, Farbe und Kindern auf der Preisseite. Die
-elf Preispositionen und ihre Beträge bleiben unverändert, ebenso der sichtbare
-Bestätigungsvorbehalt. Unklare vorhandene Bezeichnungen werden ohne Rückfrage
-beim Salon nicht umbenannt.
+Team- und Salonaufnahmen bleiben Originaldateien. Das vom Auftraggeber gelieferte
+`assets/TeamBild.jpg` bleibt erhalten; 800/1800 Pixel breite WebP-Kopien werden
+responsiv ausgeliefert und ohne Beschnitt dargestellt.
 
-Die Salonseite enthält Originalaufnahmen mit zugänglicher Bildvergrösserung.
-Die Frisureninspiration ist ein eigener Abschnitt. Der gemeinsame Kontaktbereich
-ist kompakter: sichtbare Telefonnummer, Adresse, E-Mail und externer Routenlink.
-Der Footer wiederholt die Familiengeschichte nicht.
+Die während der Erprobung erzeugten KI-Porträts wurden vom Auftraggeber als
+zu künstlich verworfen. Sie sind nicht im Repository und werden nicht ausgeliefert.
+Die Inspirationsgalerie enthält ausschliesslich die bereits vorhandene
+Frisuren-Bildsammlung. Das Instagram-Profil ist die Verbindung zu aktuellen
+eigenen Inhalten des Salons; es werden keine Beiträge automatisch kopiert.
 
-## Bild- und Logo-Dateien
+## Bewegung und Bedienung
 
-Das hochgeladene `assets/TeamBild.jpg` bleibt unverändert im Repository.
-Zwei WebP-Kopien (800/1800 Pixel, nur Formatoptimierung) liefern das Foto über
-srcset aus. Es bleibt im ursprünglichen Seitenverhältnis vollständig sichtbar.
+- Der Schriftzug wird beim Einstieg über eine Maske eingeblendet; Begleittext
+  erscheint leicht versetzt. Die Original-Salonansichten wechseln nur manuell
+  mit Vor/Zurück, Zähler und Bildbezeichnung. Keine automatische Slideshow.
+- Ein leichter Scrollversatz gibt dem Hintergrund räumliche Tiefe. Der Header
+  erhält beim Scrollen einen dunklen,
+  transparenten Hintergrund. Der native Browser-Scroll bleibt erhalten.
+- Text erscheint beim Scrollen; das Teamfoto wird über eine Bildmaske aufgedeckt.
+  Ein ungeclippter Beobachtungsrahmen verhindert unsichtbar bleibende Bilder.
+- Links, Pfeile und die Anruf-Schaltfläche erhalten gezielte Hovereffekte.
+  Unterstützende Browser verwenden kurze Seitenübergänge.
+- Das Betriebssystemsignal für reduzierte Bewegung wird respektiert.
+  Die Footer-Schaltfläche pausiert Animationen und speichert nur diese lokale
+  Präferenz. Ohne JavaScript sind Bilder, Texte und Navigation weiterhin sichtbar.
+- Galerie-Dialog mit Bildwechsel, Pfeiltasten, Escape und Fokusrückgabe.
 
-Das Logo-Paket unter `assets/brand/luethi-logo-paket.zip` enthält SVG und
-transparente PNG-Dateien (2000 Pixel breit) sowie Verwendungshinweise. Der
-Schriftzug ist eine geglättete Vektorisierung des vorhandenen Rasterbanners,
-keine behauptete Original-Vektordatei. Die historische Form bleibt erhalten.
+## Technik und Prüfung
 
-## Technik und geprüfter Stand
+Statische Seiten, lokale Manrope-Schriften, keine zusätzlichen Laufzeitpakete,
+Tracker, extern geladenen Fonts oder kostenpflichtigen Dienste. Der Instagram-
+Link lädt erst bei Klick die externe Seite. CSS und JavaScript erhalten im
+Produktionsbuild inhaltsabhängige Dateinamen, um alte Browser-Caches zu vermeiden.
+GitHub Pages nutzt `main` und den unterstützten Projekt-Unterpfad.
 
-Vier statische HTML-Seiten, gemeinsame CSS-/JavaScript-Dateien, Build ohne
-Paketinstallation. GitHub Pages verwendet einen eigenen Actions-Workflow für
-`main`. Der Build unterstützt den Projekt-Unterpfad über BASE_PATH und prüft
-auch responsive Bildverweise. Netlify bleibt technisch kompatibel.
-
-- Produktionsbuild und `npm run check` erfolgreich für Domain-Wurzel und Pages-
-  Projektpfad: vier Seiten, 93 lokale Verweise, CSS-Ressourcen und SVG-Dateien.
-- Chromium auf 320, 375, 390, 768, 1440 und 1920 Pixeln: keine horizontalen
-  Überläufe, fehlenden Bilder, Font-Ladefehler oder JavaScript-Laufzeitfehler.
-- Navigation mit Escape, Leistungsanker, Preis-Details und Galerie mit
-  Fokusrückgabe geprüft. Alle vier Seiten auch ohne JavaScript bedienbar.
-- Alle elf ursprünglichen Preisbeträge unverändert geprüft.
-- Desktop-, Tablet- und Smartphone-Screenshots aller Seiten visuell kontrolliert.
-
+Geprüft: Produktionsbuild und interne Verweise für Domain-Wurzel und Pages-Pfad;
+alle vier Seiten bei 320, 375, 390, 768, 1440 und 1920 Pixeln; Bilder, lokale
+Schriften, Navigation und Nutzung ohne JavaScript. Zusätzliche Tests mit normaler
+Bewegung prüfen Maskenanimation, manuellen Szenenwechsel, Scrollversatz,
+Headerverhalten und gespeicherte Pausenpräferenz. Preise bleiben unverändert.
 Die originale Salon-Website ausserhalb des Repositorys wird nicht verändert.
-Rechtliche Texte und Preisbestätigung bleiben vor einem offiziellen Domainwechsel
-mit dem Salon abzustimmen.

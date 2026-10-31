@@ -1,7 +1,37 @@
 (() => {
-  document.documentElement.classList.add('js-nav');
+  const root = document.documentElement;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const button = document.querySelector('.menu-btn');
   const nav = document.querySelector('#navigation');
+  const header = document.querySelector('.site-header');
+  const hero = document.querySelector('.editorial-hero');
+  const motionButton = document.querySelector('.motion-toggle');
+  let savedMotion = null;
+  try { savedMotion = localStorage.getItem('luethi-motion'); } catch { /* Storage can be unavailable. */ }
+  let paused = reduced.matches || savedMotion === 'off';
+  let frame = 0;
+
+  function updateScroll() {
+    frame = 0;
+    header.classList.toggle('is-scrolled', scrollY > 30);
+    if (hero) hero.style.setProperty('--hero-shift', !paused ? `${Math.min(scrollY * .13, 120)}px` : '0px');
+  }
+  function setMotion(value, remember = false) {
+    paused = value || reduced.matches;
+    root.classList.toggle('motion-off', paused);
+    root.style.scrollBehavior = paused ? 'auto' : '';
+    if (motionButton) {
+      motionButton.textContent = reduced.matches ? 'Bewegung reduziert' : paused ? 'Animationen aktivieren' : 'Animationen pausieren';
+      motionButton.disabled = reduced.matches;
+      motionButton.setAttribute('aria-pressed', String(paused));
+    }
+    if (remember) {
+      try { localStorage.setItem('luethi-motion', paused ? 'off' : 'on'); } catch { /* Optional preference only. */ }
+    }
+    updateScroll();
+  }
+  root.classList.add('js-nav');
+  setMotion(paused);
   const close = () => { nav.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); };
   button.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
@@ -13,16 +43,47 @@
   });
   document.addEventListener('click', event => { if (!event.target.closest('.site-header')) close(); });
   matchMedia('(min-width: 761px)').addEventListener('change', close);
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  motionButton?.addEventListener('click', () => setMotion(!paused, true));
+  reduced.addEventListener('change', event => setMotion(event.matches));
+  addEventListener('scroll', () => { if (!frame) frame = requestAnimationFrame(updateScroll); }, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    const targets = new Map();
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-    }), { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-    document.documentElement.classList.add('js-motion');
+      if (entry.isIntersecting) {
+        targets.get(entry.target).forEach(element => element.classList.add('visible'));
+        observer.unobserve(entry.target);
+      }
+    }), { threshold: .08 });
+    document.querySelectorAll('.reveal, .image-reveal').forEach(element => {
+      // Observe an unclipped wrapper, otherwise a completely masked image can
+      // have zero intersection forever and never receive its reveal class.
+      const target = element.closest('.image-trigger') || element;
+      const list = targets.get(target) || [];
+      list.push(element);
+      targets.set(target, list);
+      observer.observe(target);
+    });
+    root.classList.add('js-motion');
+  }
+  // No automatic slideshow: visitors decide when to change the real salon view.
+  if (hero) {
+    const shots = [...hero.querySelectorAll('.hero-shot')];
+    const counter = hero.querySelector('#hero-counter');
+    const caption = hero.querySelector('#hero-scene-label');
+    let index = 0;
+    const show = step => {
+      index = (index + step + shots.length) % shots.length;
+      shots.forEach((shot, i) => shot.classList.toggle('is-active', i === index));
+      counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(shots.length).padStart(2, '0')}`;
+      caption.textContent = shots[index].dataset.scene;
+    };
+    hero.querySelector('[data-hero-next]').addEventListener('click', () => show(1));
+    hero.querySelector('[data-hero-prev]').addEventListener('click', () => show(-1));
   }
 })();
 
-// With JavaScript disabled, gallery links still open the original local image.
+// Gallery links work as original image links when JavaScript is disabled.
 (() => {
   const links = [...document.querySelectorAll('[data-gallery]')];
   if (!links.length || !('HTMLDialogElement' in window)) return;
@@ -39,20 +100,41 @@
   image.alt = links[0].querySelector('img').alt;
   const caption = document.createElement('figcaption');
   figure.append(image, caption);
-  dialog.append(closeButton, figure);
+  const controls = document.createElement('div');
+  controls.className = 'gallery-nav';
+  const previous = document.createElement('button');
+  previous.type = 'button'; previous.textContent = 'Zurück';
+  previous.setAttribute('aria-label', 'Vorheriges Bild');
+  const next = document.createElement('button');
+  next.type = 'button'; next.textContent = 'Weiter';
+  next.setAttribute('aria-label', 'Nächstes Bild');
+  const count = document.createElement('span');
+  count.setAttribute('aria-live', 'polite');
+  controls.append(previous, count, next);
+  dialog.append(closeButton, figure, controls);
   document.body.append(dialog);
   let previousOverflow = '';
   let trigger;
-  links.forEach(link => link.addEventListener('click', event => {
-    event.preventDefault();
-    trigger = link;
-    image.src = link.href;
-    image.alt = link.querySelector('img').alt;
-    caption.textContent = link.dataset.caption;
+  let index = 0;
+  const show = value => {
+    index = (value + links.length) % links.length;
+    image.src = links[index].href;
+    image.alt = links[index].querySelector('img').alt;
+    caption.textContent = links[index].dataset.caption;
+    count.textContent = `${index + 1} / ${links.length}`;
+  };
+  links.forEach((link, i) => link.addEventListener('click', event => {
+    event.preventDefault(); trigger = link; show(i);
     previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     dialog.showModal();
   }));
+  previous.addEventListener('click', () => show(index - 1));
+  next.addEventListener('click', () => show(index + 1));
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); show(index - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); show(index + 1); }
+  });
   closeButton.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => {

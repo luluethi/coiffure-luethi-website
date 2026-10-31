@@ -1,4 +1,5 @@
-import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { cp, mkdir, readdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 
 // Source files use root URLs for local development. A project-site deployment
 // can prefix those URLs without changing the source or Netlify's root build.
@@ -36,6 +37,22 @@ async function prefixUrls(directory) {
   }
 }
 if (basePath) await prefixUrls('dist');
+// Content-specific asset URLs prevent a cached old stylesheet or script from
+// surviving a new Pages deployment. Source URLs stay simple for local editing.
+const assetNames = new Map();
+for (const name of ['site.css', 'site.js']) {
+  const data = await readFile(`dist/assets/${name}`);
+  const hash = createHash('sha256').update(data).digest('hex').slice(0, 12);
+  const renamed = name.replace('.', `.${hash}.`);
+  await rename(`dist/assets/${name}`, `dist/assets/${renamed}`);
+  assetNames.set(name, renamed);
+}
+for (const page of ['index.html', 'team/index.html', 'preise/index.html', 'salon/index.html']) {
+  let html = await readFile(`dist/${page}`, 'utf8');
+  for (const [name, renamed] of assetNames) html = html.replaceAll(`assets/${name}`, `assets/${renamed}`);
+  await writeFile(`dist/${page}`, html);
+}
+
 // Pages should serve the built files directly, without a Jekyll transformation.
 await writeFile('dist/.nojekyll', '');
 console.log(`Built four static pages into dist/ (base path: ${basePath || '/'})`);
