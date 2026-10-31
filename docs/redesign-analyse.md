@@ -1,122 +1,70 @@
-# Coiffure Lüthi — animierter, bildbetonter Auftritt
+# Aktueller Auftritt: Salonansichten, Team und klare Besuchswege
 
-## Inhaltliche Grundlage
+## Verbindliche Grundlagen
 
-Familienbetrieb in Wohlen seit 1987. Die Website verwendet Sie und beschreibt
-konkret Team, Räume, Leistungen und Kontakt. Preise, Rollen und Kontaktdaten
-stammen aus dem vorhandenen Repository. Keine neuen Spezialisierungen,
-Bewertungen oder biografischen Angaben werden erfunden.
+Coiffure Lüthi ist ein Familienbetrieb in Wohlen seit 1987. Die öffentliche
+Ansprache ist Sie. Nur der Lüthi-Schriftzug ist gelb; Buttons, Links und übrige
+Oberflächenelemente sind neutral. Die dunkle Richtung bleibt erhalten.
 
-## Gestalterische Entscheidung
+Team und Salon zeigen ausschliesslich Originalfotografien. Preise, Rollen und
+Kontaktdaten bleiben unverändert. Öffnungszeiten werden auf ausdrücklichen Wunsch
+nicht gezeigt. Die vorhandenen Preisbezeichnungen bleiben ohne zusätzliche
+Erklärungen bestehen. Keine neuen Spezialisierungen oder biografischen Angaben.
 
-Der Auftraggeber hat die dunkle Richtung gewählt und anschliessend mehr
-Eigenständigkeit, Bildwirkung und Bewegung gewünscht. Der aktuelle Aufbau
-ersetzt das übliche Text-links/Bild-rechts-Muster des Einstiegs durch einen
-bildfüllenden Original-Salonblick mit dem grossen gelben Lüthi-Schriftzug.
+## Neue Startseiten-Komposition
 
-Die anschliessende Teamsektion zeigt das echte Gruppenfoto. Ein heller Abschnitt
-mit grossen Leistungsbegriffen schafft einen bewussten Kontrast zur dunklen
-Bildwelt. Der Instagram-Verweis führt zu dem bestätigten Profil
-https://www.instagram.com/coiffureluethi/. Er ist ein externer Profil-Link,
-kein automatisch importierter Feed und keine nachgebaute Beitragsansicht.
+Die Startseite beginnt direkt mit einer sichtbaren Überschrift und der Bildfolge.
+Ein grosser überlagerter Logo-Banner und ein separater Salon-Teaser entfallen.
+Die Hauptansicht, auswählbare Vorschaubilder und das Teamfoto sind in einer
+zusammenhängenden Übersicht angeordnet. Auf Smartphones folgen sie in einer
+natürlichen Reihenfolge: Hauptbild, Bildsteuerung, Vorschaubilder und Teamfoto.
 
-Die Familie/Geschichte erscheint einmal im Einstieg. Keine zusätzlichen
-Geschichtsblöcke, nummerierten Personen oder doppelten Porträtlisten auf der
-Startseite. Team, Preisseite und Galerie verwenden dieselben Schriften,
-Farben, Verlinkungen, Animationen und Kontaktformen.
+Die Aussenansicht steht zuerst. Es folgen Fensterplätze, Innenraum und Empfang.
+Alle vier Bilder werden vollständig im originalen Seitenverhältnis dargestellt;
+keine Vergrösserung, Scrollverschiebung oder erzwungener Ausschnitt. Die Auswahl
+per Vorschaubild, Vor/Zurück, Tastatur und Wischen wechselt Ansicht, Beschriftung,
+Zähler und Auswahlzustand gemeinsam. Keine automatische Slideshow.
 
-## Bilder und Echtheit
+Das Teamfoto ist in die Bildübersicht integriert, statt einen weiteren grossen
+Abschnitt mit wiederholter Vorstellung zu bilden. Die Angaben zum Familienbetrieb
+stehen einmal bei diesem Teamfoto. Die Leistungen liegen in einem eingerückten
+hellen Feld; die vier Kategorien führen direkt zu den vorhandenen Preisen.
+Instagram wird als kompakter Profil-Link dargestellt. Ein grosser Platzhalter-
+Abschnitt ohne Beiträge entfällt. Der gemeinsame Kontaktbereich bleibt klar
+und kompakt, mit direkter Telefonnummer, Adresse, E-Mail und Routenlink.
 
-Team- und Salonaufnahmen bleiben Originaldateien. Das vom Auftraggeber gelieferte
-`assets/TeamBild.jpg` bleibt erhalten; 800/1800 Pixel breite WebP-Kopien werden
-responsiv ausgeliefert und ohne Beschnitt dargestellt.
+## Bewegung und Zugänglichkeit
 
-Die während der Erprobung erzeugten KI-Porträts wurden vom Auftraggeber als
-zu künstlich verworfen. Sie sind nicht im Repository und werden nicht ausgeliefert.
-Die frühere allgemeine Modebild-Galerie wird nicht mehr auf der Website gezeigt.
-Die Dateien bleiben als bestehender Bestand im Repository erhalten. Das Instagram-Profil ist die Verbindung zu aktuellen
-eigenen Inhalten des Salons; es werden keine Beiträge automatisch kopiert.
+Fotoüberblendung und Auswahlzustände unterstützen die Navigation. Titel und
+Teambild werden dezent eingeblendet. Die Bildmaske beobachtet einen ungeclippten
+Rahmen, damit Bilder nicht dauerhaft unsichtbar bleiben können. Reduzierte
+Bewegung des Betriebssystems und die gespeicherte Animationspause werden
+respektiert. Der Browser-Scroll bleibt unverändert.
 
-## Bewegung und Bedienung
-
-- Der Schriftzug wird beim Einstieg über eine Maske eingeblendet; Begleittext
-  erscheint leicht versetzt. Die Original-Salonansichten wechseln nur manuell
-  mit Vor/Zurück, Zähler und Bildbezeichnung. Keine automatische Slideshow.
-- Salonfotos bleiben ohne Zoom oder Scrollversatz im Originalausschnitt. Der Header
-  erhält beim Scrollen einen dunklen,
-  transparenten Hintergrund. Der native Browser-Scroll bleibt erhalten.
-- Text erscheint beim Scrollen; das Teamfoto wird über eine Bildmaske aufgedeckt.
-  Ein ungeclippter Beobachtungsrahmen verhindert unsichtbar bleibende Bilder.
-- Links, Pfeile und die Anruf-Schaltfläche erhalten gezielte Hovereffekte.
-  Unterstützende Browser verwenden kurze Seitenübergänge.
-- Das Betriebssystemsignal für reduzierte Bewegung wird respektiert.
-  Die Footer-Schaltfläche pausiert Animationen und speichert nur diese lokale
-  Präferenz. Ohne JavaScript sind Bilder, Texte und Navigation weiterhin sichtbar.
-- Galerie-Dialog mit Bildwechsel, Pfeiltasten, Escape und Fokusrückgabe.
+Die Bildfläche unterstützt Pfeiltasten sowie Home/End; Touch-Wischen betrifft
+nur horizontale Bewegungen. Vorschaubilder sind benannte Buttons mit aria-pressed;
+inaktive Hauptbilder sind für Screenreader ausgeblendet. Ohne JavaScript bleiben
+das erste Bild, das Team und der direkte Link zur vollständigen Galerie nutzbar.
+Inaktive Bildsteuerungen sind dann ausgeblendet. Die Galerie auf der Salonseite
+unterstützt Bildwechsel, Escape und Fokusrückgabe.
 
 ## Technik und Prüfung
 
-Statische Seiten, lokale Manrope-Schriften, keine zusätzlichen Laufzeitpakete,
-Tracker, extern geladenen Fonts oder kostenpflichtigen Dienste. Der Instagram-
-Link lädt erst bei Klick die externe Seite. CSS und JavaScript erhalten im
-Produktionsbuild inhaltsabhängige Dateinamen, um alte Browser-Caches zu vermeiden.
-GitHub Pages nutzt `main` und den unterstützten Projekt-Unterpfad.
+Die Startseiten-Komposition liegt in `assets/home.css`. Gemeinsame Unterseiten-
+Stile bleiben in `assets/site.css`. Beide Stylesheets und das gemeinsame Skript
+bekommen im Build Inhalts-Hashes; Quellpfade bleiben für lokale Entwicklung
+unverändert. Pages-Projektpfad und Domain-Wurzel werden weiterhin unterstützt.
 
-Geprüft: Produktionsbuild und interne Verweise für Domain-Wurzel und Pages-Pfad;
-alle vier Seiten bei 320, 375, 390, 768, 1440 und 1920 Pixeln; Bilder, lokale
-Schriften, Navigation und Nutzung ohne JavaScript. Zusätzliche Tests mit normaler
-Bewegung prüfen Maskenanimation, manuellen Szenenwechsel, unveränderten Bildausschnitt,
-Headerverhalten und gespeicherte Pausenpräferenz. Preise bleiben unverändert.
-Die originale Salon-Website ausserhalb des Repositorys wird nicht verändert.
+Geprüft: Build und interne Verweise in beiden Varianten; vier Seiten bei 320,
+375, 390, 768, 1440 und 1920 Pixeln; Bilder, Fonts, Überläufe, Navigation, Preis-
+Sprunglinks, Galerie und Nutzung ohne JavaScript. Zusätzliche Funktionsprüfungen
+bei 320/390/768/1440 Pixeln umfassen Vorschaubilder, ARIA-Auswahl, Tastatur inklusive
+Umlauf, Wischgeste, Originalproportionen, Teamfoto-Einblendung und gespeicherte
+Animationspause. Die Team- und Salon-Bilddateien wurden nicht verändert.
 
-
-## Präzisierung: Logo-Farbe und natürliche Bildausschnitte
-
-Gelb wird ausschliesslich für den Lüthi-Schriftzug verwendet. Buttons, Links,
-Fokusränder, Nummern und dekorative Punkte verwenden neutrale helle Farben.
-Farben innerhalb der unveränderten Originalfotografien bleiben erhalten.
-
-Die Bildfolge beginnt mit dem Salon von aussen, gefolgt von Bedienplätzen,
-Innenansicht und Empfang. Im Startbereich werden alle vier Bilder vollständig
-über contain gezeigt, ohne Vergrösserung oder Hintergrundverschiebung. Auf
-Smartphones erhält das Foto einen eigenen Rahmen im Originalseitenverhältnis.
-Die Salon-Galerie verwendet natürliche Bildhöhen statt erzwungener Quer-/Hochformate;
-auch der Hover-Zoom ist entfernt. Überblendungen und Schrift-/Bildmasken bleiben.
-
-Zusätzlich geprüft: alle vier Hero-Bilder ohne Zoom/Pan sowie alle fünf
-Galeriefotos mit identischen Original-/Darstellungsproportionen bei 320, 390,
-768, 1440 und 1920 Pixeln. Allgemeine Browserprüfung aller vier Seiten bei sechs
-Breiten und beide Produktionsbuilds erfolgreich.
-
-Der Auftraggeber hat das Instagram-Konto als persönliches Konto bestätigt. Ein
-offizieller dynamischer Feed erfordert ein professionelles Konto und eine
-autorisierte API-Verbindung; diese Voraussetzungen sind noch nicht vorhanden.
-Bis dahin bleibt der Profil-Link bestehen. Es wurde weder ein Feed vorgetäuscht
-noch der Kontotyp des Salons verändert.
-
-
-## Lesbarkeit, mobile Gewichtung und Kontakt
-
-Die Schriftzug-Breite im Desktop-Einstieg ist von 840 auf maximal 560 Pixel
-reduziert. Mobil ist der Einstieg kürzer, das Gruppenfoto steht vor der
-Teameinleitung. Bei 390 × 844 Pixeln beginnt das Foto jetzt bei etwa 640 statt
-1190 Pixeln. Die dauerhafte Telefonleiste übernimmt mobil die Terminaktion;
-der zusätzliche Hero-Terminbutton wird dort ausgeblendet.
-
-Grundschrift 17 Pixel, grössere Begleittexte und Bildunterschriften, mindestens
-44 Pixel hohe Bildsteuerungen, Preis-Kategorielinks und zentrale Kontaktaktionen.
-Sprunglinks berücksichtigen die feste Header-Höhe, damit Preisüberschriften nach
-der Navigation sichtbar bleiben. Der Kontaktbereich verwendet eine gefüllte
-Überschrift und direkt daneben die Telefonnummer; der zusätzliche Pfeilkreis
-und die riesige doppelte Kontur-Überschrift sind entfernt.
-
-Die Salonseite zeigt ausschliesslich eigene Räume; der frühere Modelbereich ist
-durch einen direkten Instagram-Verweis ersetzt. Es wird keine neue Arbeit
-behauptet und kein Feed vorgetäuscht.
-
-Geprüft: alle vier Seiten auf sechs Breiten, mobile Reihenfolge und Grössen
-bei 320/390/768/1440 Pixeln, mindestens 44 Pixel grosse Bildsteuerung und sichtbar
-unterhalb des Headers angesprungene Farbpreis-Überschrift. Die elf ursprünglichen
-Preispositionen bleiben unverändert. Der Auftraggeber möchte
-keine Öffnungszeiten veröffentlichen. Die bestehenden Preisbezeichnungen bleiben
-auf ausdrücklichen Wunsch unverändert und werden nicht zusätzlich erklärt.
+Der Instagram-Link führt zum bestätigten Profil @coiffureluethi. Ein dynamischer
+Feed ist weiterhin nicht angeschlossen: Das Konto ist laut Auftraggeber
+persönlich, für die offizielle Feed-Anbindung sind ein professionelles Konto
+und eine Autorisierung erforderlich. Es werden keine Beiträge oder KI-Porträts
+vorgetäuscht. Die originale Salon-Website ausserhalb des Repositorys bleibt
+unverändert.

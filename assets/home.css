@@ -1,0 +1,111 @@
+/* Homepage: one continuous salon tour, followed by a compact offer and contact. */
+.js-nav .home .site-header { position: sticky; background: var(--bg); }
+.salon-entrance { padding-top: 42px; padding-bottom: 42px; }
+.entrance-head { display: flex; align-items: end; justify-content: space-between; gap: 45px; margin-bottom: 34px; }
+.entrance-head h1 { font-size: clamp(46px, 5.05vw, 74px); line-height: 1.08; letter-spacing: -.045em; font-weight: 600; }
+.entrance-head h1 > span { display: inline-block; color: #aeb4a5; font-weight: 400; margin-left: .08em; }
+.entrance-call { display: inline-flex; align-items: center; justify-content: space-between; gap: 25px; font-size: 14px; line-height: 1.5; padding: 12px 17px; min-height: 48px; flex-shrink: 0; border: 1px solid #818a73; }
+.entrance-call:hover { background: var(--accent); color: var(--bg); }
+.entrance-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, .85fr); gap: 32px; align-items: start; }
+.tour-main, .tour-rail { min-width: 0; }
+.tour-stage { position: relative; aspect-ratio: 1600/1066; background: #22251f; overflow: hidden; touch-action: pan-y pinch-zoom; }
+.tour-stage .hero-shot { position: absolute; inset: 0; opacity: 0; transition: opacity .55s ease; }
+.tour-stage .hero-shot.is-active { opacity: 1; }
+.tour-stage .hero-shot img { width: 100%; height: 100%; object-fit: contain; transform: none; }
+.tour-meta { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 15px 8px; }
+.tour-meta #hero-scene-label { font-size: 17px; color: var(--text); margin: 0; font-weight: 600; }
+.tour-pagination { display: none; align-items: center; gap: 13px; }
+.js-nav .tour-pagination { display: flex; }
+.tour-pagination #hero-counter { font-size: 12px; min-width: 49px; }
+.tour-pagination .scene-button { width: 44px; height: 44px; }
+.tour-gallery-link { display: inline-flex; align-items: center; gap: 20px; font-size: 13px; color: var(--muted); padding-block: 5px; min-height: 36px; }
+.tour-gallery-link .icon { width: 15px; height: 15px; }
+.tour-gallery-link:hover { color: var(--text); }
+.tour-choices { display: none; }
+.js-nav .tour-choices { display: grid; }
+.tour-choice { display: grid; grid-template-columns: 72px 1fr 22px; align-items: center; gap: 16px; min-height: 72px; padding: 10px; border: 0; border-bottom: 1px solid #454d3e; color: var(--muted); background: transparent; text-align: left; font-size: 14px; transition: background .25s, color .25s; }
+.tour-choice:first-child { border-top: 1px solid #454d3e; }
+.tour-choice > img { width: 72px; height: auto; aspect-ratio: 1600/1066; object-fit: contain; opacity: .65; transition: opacity .25s; }
+.tour-choice .choice-arrow { display: flex; opacity: 0; transform: translate(-4px, 4px); transition: opacity .25s, transform .25s; }
+.tour-choice .choice-arrow > .icon { width: 19px; height: 19px; }
+.tour-choice:hover, .tour-choice.is-selected { background: #2b3026; color: var(--text); }
+.tour-choice.is-selected > img, .tour-choice:hover > img { opacity: 1; }
+.tour-choice.is-selected .choice-arrow { opacity: 1; transform: none; }
+.team-card { margin-top: 24px; scroll-margin-top: 110px; }
+.team-card .team-photo img { width: 100%; height: auto; object-fit: contain; }
+.team-card-caption { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: 9px; }
+.team-card-caption h2 { font-size: 20px; font-weight: 600; letter-spacing: -.035em; }
+.team-card-caption > .text-link { font-size: 13px; gap: 10px; }
+.team-card > p { font-size: 14px; line-height: 1.7; margin-top: 4px; }
+.offer-section { padding-block: 28px 38px; }
+.offer-panel { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: 70px; background: #eeeee5; color: #171916; padding: 55px 60px; border-radius: 3px; }
+.offer-heading { position: sticky; top: 125px; }
+.offer-heading .eyebrow { color: #54594c; }
+.offer-heading h2 { font-size: clamp(47px, 4.8vw, 68px); line-height: 1.05; letter-spacing: -.06em; }
+.offer-heading h2 > span { color: #747b67; }
+.offer-heading > .text-link { margin-top: 26px; }
+.offer-panel .text-link:hover { color: #4a523d; border-color: #4a523d; }
+.offer-panel .service-row h3 { font-size: clamp(24px, 2.2vw, 32px); }
+.offer-panel .service-row > div > span { font-size: 14px; }
+.offer-panel a:focus-visible { outline-color: #171916; }
+.social-strip { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 10px 38px; }
+.social-strip > span { font-size: 14px; color: var(--muted); }
+.social-strip .text-link { font-size: 14px; }
+@media (max-width: 1100px) {
+  .salon-entrance { padding-top: 32px; }
+  .entrance-head { margin-bottom: 28px; }
+  .entrance-head h1 { font-size: clamp(42px, 5.5vw, 60px); }
+  .entrance-call { display: none; }
+  .entrance-grid { grid-template-columns: minmax(0, 1.55fr) minmax(0, .9fr); gap: 24px; }
+  .tour-choice { grid-template-columns: 55px 1fr; gap: 12px; padding: 8px; min-height: 60px; font-size: 13px; }
+  .tour-choice > img { width: 55px; }
+  .tour-choice .choice-arrow { display: none; }
+  .team-card-caption { display: block; margin-top: 14px; }
+  .team-card-caption > .text-link { margin-top: 3px; }
+  .team-card > p { font-size: 13px; }
+  .offer-panel { padding: 40px 35px; gap: 45px; }
+}
+@media (max-width: 760px) {
+  .salon-entrance { padding-block: 25px 24px; }
+  .entrance-head { display: block; margin-bottom: 23px; }
+  .entrance-head h1 { font-size: clamp(35px, 9.3vw, 52px); line-height: 1.12; }
+  .entrance-head h1 > span { display: block; margin-left: 0; }
+  .entrance-grid { grid-template-columns: 1fr; gap: 15px; }
+  .tour-meta { gap: 15px; padding-block: 10px 0; }
+  .tour-meta #hero-scene-label { font-size: 16px; }
+  .tour-pagination { gap: 8px; }
+  .tour-pagination #hero-counter { min-width: 43px; font-size: 11px; }
+  .tour-gallery-link { font-size: 12px; min-height: 33px; }
+  .js-nav .tour-choices { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .tour-choice { display: flex; flex-direction: column; justify-content: start; gap: 7px; padding: 0 0 8px; border-top: 0; font-size: 11px; min-height: 69px; }
+  .tour-choice:first-child { border-top: 0; }
+  .tour-choice > img { width: 100%; }
+  .tour-choice > span:not(.choice-arrow) { padding-inline: 3px; white-space: nowrap; }
+  .team-card { margin-top: 24px; }
+  .team-card-caption { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+  .team-card-caption h2 { font-size: 20px; }
+  .team-card-caption .text-link { margin-top: 0; font-size: 13px; }
+  .team-card > p { font-size: 14px; }
+  .offer-section { padding-block: 14px 16px; }
+  .offer-panel { display: block; padding: 30px 24px; }
+  .offer-heading { position: static; margin-bottom: 28px; }
+  .offer-heading h2 { font-size: 47px; }
+  .offer-heading > .text-link { margin-top: 22px; }
+  .offer-panel .service-row { padding-block: 22px; }
+  .offer-panel .service-row h3 { font-size: 25px; }
+  .offer-panel .service-row > div > span { font-size: 14px; }
+  .social-strip { display: block; padding-block: 15px 28px; }
+  .social-strip > span { display: block; font-size: 13px; }
+  .social-strip .text-link { margin-top: 6px; font-size: 14px; gap: 15px; }
+}
+@media (max-width: 360px) {
+  .entrance-head h1 { font-size: 33px; }
+  .tour-choice { font-size: 10px; }
+  .offer-panel { padding-inline: 20px; }
+  .offer-heading h2 { font-size: 42px; }
+  .offer-panel .service-row h3 { font-size: 23px; }
+  .social-strip .text-link { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .salon-entrance *, .offer-panel *, .social-strip * { transition: none !important; animation: none !important; }
+}

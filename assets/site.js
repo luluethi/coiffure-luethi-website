@@ -4,7 +4,7 @@
   const button = document.querySelector('.menu-btn');
   const nav = document.querySelector('#navigation');
   const header = document.querySelector('.site-header');
-  const hero = document.querySelector('.editorial-hero');
+  const hero = document.querySelector('.salon-entrance');
   const motionButton = document.querySelector('.motion-toggle');
   let savedMotion = null;
   try { savedMotion = localStorage.getItem('luethi-motion'); } catch { /* Storage can be unavailable. */ }
@@ -66,20 +66,52 @@
     });
     root.classList.add('js-motion');
   }
-  // No automatic slideshow: visitors decide when to change the real salon view.
+  // Each selection represents a real salon view. No timer or camera movement.
   if (hero) {
     const shots = [...hero.querySelectorAll('.hero-shot')];
+    const choices = [...hero.querySelectorAll('[data-hero-select]')];
+    const stage = hero.querySelector('.tour-stage');
+    stage.tabIndex = 0;
+    stage.setAttribute('aria-label', 'Salonbilder. Mit den Pfeiltasten zwischen vier Ansichten wechseln.');
     const counter = hero.querySelector('#hero-counter');
     const caption = hero.querySelector('#hero-scene-label');
     let index = 0;
-    const show = step => {
-      index = (index + step + shots.length) % shots.length;
-      shots.forEach((shot, i) => shot.classList.toggle('is-active', i === index));
+    const select = value => {
+      index = (value + shots.length) % shots.length;
+      shots.forEach((shot, i) => {
+        shot.classList.toggle('is-active', i === index);
+        shot.setAttribute('aria-hidden', String(i !== index));
+      });
+      choices.forEach((choice, i) => {
+        choice.classList.toggle('is-selected', i === index);
+        choice.setAttribute('aria-pressed', String(i === index));
+      });
       counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(shots.length).padStart(2, '0')}`;
       caption.textContent = shots[index].dataset.scene;
     };
-    hero.querySelector('[data-hero-next]').addEventListener('click', () => show(1));
-    hero.querySelector('[data-hero-prev]').addEventListener('click', () => show(-1));
+    hero.querySelector('[data-hero-next]').addEventListener('click', () => select(index + 1));
+    hero.querySelector('[data-hero-prev]').addEventListener('click', () => select(index - 1));
+    choices.forEach(choice => choice.addEventListener('click', () => select(Number(choice.dataset.heroSelect))));
+    stage.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault(); select(index + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+      if (event.key === 'Home' || event.key === 'End') {
+        event.preventDefault(); select(event.key === 'Home' ? 0 : shots.length - 1);
+      }
+    });
+    let touchStart = null;
+    stage.addEventListener('pointerdown', event => {
+      if (event.pointerType === 'touch') touchStart = { x: event.clientX, y: event.clientY };
+    }, { passive: true });
+    stage.addEventListener('pointerup', event => {
+      if (!touchStart) return;
+      const dx = event.clientX - touchStart.x;
+      const dy = event.clientY - touchStart.y;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) select(index + (dx < 0 ? 1 : -1));
+      touchStart = null;
+    }, { passive: true });
+    stage.addEventListener('pointercancel', () => { touchStart = null; }, { passive: true });
   }
 })();
 

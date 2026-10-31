@@ -13,7 +13,7 @@ for (const file of ['index.html', 'team', 'preise', 'salon']) {
   await cp(file, `dist/${file}`, { recursive: true });
 }
 await mkdir('dist/assets', { recursive: true });
-for (const file of ['site.css', 'site.js', 'luethi.svg', 'favicon.svg', 'images', 'fonts', 'brand']) {
+for (const file of ['site.css', 'home.css', 'site.js', 'luethi.svg', 'favicon.svg', 'images', 'fonts', 'brand']) {
   await cp(`assets/${file}`, `dist/assets/${file}`, { recursive: true });
 }
 async function prefixUrls(directory) {
@@ -40,7 +40,7 @@ if (basePath) await prefixUrls('dist');
 // Content-specific asset URLs prevent a cached old stylesheet or script from
 // surviving a new Pages deployment. Source URLs stay simple for local editing.
 const assetNames = new Map();
-for (const name of ['site.css', 'site.js']) {
+for (const name of ['site.css', 'home.css', 'site.js']) {
   const data = await readFile(`dist/assets/${name}`);
   const hash = createHash('sha256').update(data).digest('hex').slice(0, 12);
   const renamed = name.replace('.', `.${hash}.`);

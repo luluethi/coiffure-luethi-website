@@ -1,118 +1,75 @@
-# Coiffure Lüthi — Familienbetrieb in Wohlen seit 1987
+# Coiffure Lüthi — Website-Demo
 
 Vier statische Seiten: Startseite, Leistungen & Preise, Team und Salon.
-Bildbetonter dunkler Auftritt mit animiertem Lüthi-Schriftzug, lokaler Manrope-Typografie
-und optimierten Originalbildern. Keine kostenpflichtigen Dienste, kein Framework
-und keine Paketinstallation für Build oder Betrieb.
+Dunkler Auftritt mit gelbem Lüthi-Schriftzug, lokalen Manrope-Schriften und
+Originalfotografien. Kein Framework, keine Paketinstallation und keine
+kostenpflichtigen Laufzeitdienste.
 
-## Entwicklung
+## Lokal entwickeln und prüfen
 
 Node.js 22 oder neuer; Python 3 für Webserver und Inhaltsprüfung.
 
 ```sh
 npm run dev
-```
-
-## Produktionsbuild und Prüfung
-
-```sh
 npm run build
 npm run check
 python3 -m http.server 8000 --directory dist
 ```
 
-## GitHub-Pages-Demo
-
-Der Workflow `.github/workflows/pages.yml` baut und prüft jeden Push auf `main`
-und veröffentlicht das Ergebnis mit GitHub Pages. Über `workflow_dispatch` kann
-auch ohne Codeänderung neu veröffentlicht werden. Überholte Läufe werden
-abgebrochen. Es werden keine eigenen Zugangsdaten benötigt; der Workflow nutzt
-das von GitHub bereitgestellte, auf Pages beschränkte Job-Token.
-
-Einmalig im Repository unter **Settings → Pages → Build and deployment → Source**
-**GitHub Actions** auswählen. Für kostenlose Nutzung mit GitHub Free muss das
-Repository öffentlich sein; dieser Workflow ändert keine Sichtbarkeit.
-
-Vorgesehene Projektadresse (ohne eigene Domain):
-`https://luluethi.github.io/coiffure-luethi-website/`
-
-`actions/configure-pages` liefert den tatsächlichen Unterpfad. Der Build setzt
-`BASE_PATH` nur für die Ausgabedateien; die Quelldateien bleiben unverändert
-unter einer Domain-Wurzel nutzbar. Projektpfade lassen sich lokal prüfen:
+Für GitHub Pages mit Projektpfad:
 
 ```sh
 BASE_PATH=/coiffure-luethi-website npm run build
 BASE_PATH=/coiffure-luethi-website npm run check
 ```
 
-Netlify bleibt kompatibel: Build `npm run build`, Ausgabe `dist`, ohne BASE_PATH.
-Das Netlify-Projekt und die ursprüngliche Salon-Website werden durch die
-Pages-Einrichtung nicht gelöscht oder verändert. Das Netlify-Projekt kann nach
-einem erfolgreich geprüften Pages-Deployment separat entfernt werden.
+## Veröffentlichung
 
-## Inhalte und Gestaltung
+`.github/workflows/pages.yml` baut und prüft Pushes auf `main` und veröffentlicht
+mit GitHub Pages. Überholte Läufe werden abgebrochen. Ein manueller Start ist
+über Run workflow möglich. Repository Settings → Pages verwendet GitHub Actions.
 
-[Analyse und Designsystem](docs/redesign-analyse.md) beschreiben die Leitlinie
-und das Zusammenspiel aller Seiten. Das bestätigte Gründungsjahr ist 1987.
-Teammitglieder, Rollen, Kontaktdaten und elf Preispositionen basieren auf dem
-vorhandenen Repository. Preise behalten ihren sichtbaren Bestätigungsvorbehalt.
-Öffnungszeiten, Bewertungen und biografische Angaben wurden nicht erfunden.
-Rechtliche Angaben müssen vor einem offiziellen Domainwechsel ergänzt werden.
+Demo: https://luluethi.github.io/coiffure-luethi-website/
 
-Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Das Gruppenbild
-`assets/TeamBild.jpg` steht im Teamabschnitt der Startseite; optimierte WebP-Dateien
-unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert. Die allgemeinen Modebilder
-werden nicht mehr als Galerie angezeigt. Original-JPG-Dateien bleiben erhalten;
-die Website verwendet WebP-Versionen.
+Der Build erstellt `dist`, passt lokale Bild-, Font- und Navigationspfade an und
+versioniert `site.css`, `home.css` und `site.js` mit Inhalts-Hashes gegen alte
+Browser-Caches. Ohne BASE_PATH bleibt ein Build für die Domain-Wurzel möglich.
+Netlify bleibt mit `npm run build` und Ausgabe `dist` kompatibel. Die originale
+Salon-Website ausserhalb des Repositorys wird nicht verändert.
 
-Manrope wird lokal in 400, 600 und 800 geladen. Die SIL-OFL-Lizenz liegt
-unter `assets/fonts`. Keine Anfragen an externe Font-Dienste, keine Tracker und
-keine eingebettete Karte. Google Maps öffnet nur nach Klick einen externen Link.
+## Komposition und Bedienung
 
-## Logo separat verwenden
+Die Startseite verbindet eine grosse Salonansicht mit direkt auswählbaren
+Vorschaubildern und dem Teamfoto. Bilder wechseln per Auswahl, Vor/Zurück,
+Pfeiltasten, Home/End oder horizontaler Touch-Wischgeste. Es gibt keinen Timer,
+Zoom oder Hintergrundversatz. Die Aussenansicht steht zuerst, alle Bilder
+bleiben vollständig und unverzerrt.
 
-[Logo-Paket herunterladen](assets/brand/luethi-logo-paket.zip): gelbe Hauptversion
-sowie einfarbige Alternativen als SVG und transparente PNG (2000 Pixel breit).
-Das Logo besteht nur aus dem Schriftzug; die vertraute Form wurde als Vektor
-aus der vorhandenen Rastervorlage aufbereitet. Herkunft und Einsatzhinweise
-stehen in `assets/brand/README.txt`.
+Bewegung wird bei entsprechender Betriebssystemeinstellung reduziert und lässt
+sich im Footer pausieren. Die lokale Präferenz wird gespeichert. Ohne JavaScript
+bleiben Inhalte, Navigation und Galerie-Link sichtbar. Galerie-Dialog mit
+Tastatursteuerung, Escape und Fokusrückgabe. Preis-Sprunglinks berücksichtigen
+den festen Header.
 
-## Bedienung
+## Inhalte und Dateien
 
-Mobile Navigation mit Escape-Taste, sichtbare Tastaturfokusse, Sprunglink,
-reduzierte Bewegung und ohne JavaScript sichtbare Inhalte/Navigation. Die
-Salon-Galerie nutzt einen nativen Dialog mit Escape-Taste und Fokusrückgabe;
-ohne JavaScript öffnen die Bildlinks direkt das Originalbild. Terminvereinbarung
-führt direkt zu `tel:+41566226040`.
+[Designsystem und Prüfung](docs/redesign-analyse.md) dokumentieren die aktuelle
+Komposition. Team, Rollen, Kontakt und elf Preispositionen basieren auf dem
+vorhandenen Repository. Preise behalten den bestehenden Bestätigungsvorbehalt.
+Öffnungszeiten werden bewusst weggelassen, Preisbezeichnungen nicht zusätzlich
+erklärt. Persönliche Zukunftspläne werden nicht veröffentlicht.
 
-## Bildsprache und Animationen
+Das hochgeladene `assets/TeamBild.jpg` bleibt unverändert; optimierte WebP-Kopien
+unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert.
+Alle Salonbilder sind Originalaufnahmen. Allgemeine Modelbilder und KI-Porträts
+werden nicht als eigene Arbeiten gezeigt.
 
-Der Einstieg zeigt vier manuell wechselbare Original-Salonansichten. Den Anfang
-macht die Aussenansicht; der gelbe Schriftzug steht als Markenzeichen darüber. Darauf folgen Team, Leistungen und der direkte Link
-zu [@coiffureluethi](https://www.instagram.com/coiffureluethi/). Es werden keine
-Instagram-Posts nachgebaut und keine KI-Porträts ausgeliefert.
+Der aktuelle Instagram-Verweis führt zu https://www.instagram.com/coiffureluethi/.
+Ein dynamischer Feed benötigt die Umstellung des persönlichen Kontos auf
+Business/Creator und eine offizielle Autorisierung; aktuell wird kein Live-Feed
+behauptet. Keine Tracker, externen Fonts oder eingebettete Karte. Manrope ist
+lokal unter SIL Open Font License eingebunden; Lizenz unter `assets/fonts`.
 
-Scroll-Einblendungen, Bildmaske und Seitenübergänge ergänzen
-die Gestaltung. Animationen lassen sich im Footer pausieren; die lokale Präferenz
-bleibt erhalten. Reduzierte Bewegung des Betriebssystems hat Vorrang. Die Galerie
-unterstützt Vor/Zurück, Pfeiltasten und Escape.
-
-Der Build versieht CSS und JavaScript mit einem Inhalts-Hash im Dateinamen.
-Dadurch erhält ein neues Deployment neue Asset-URLs, ohne Quelldateinamen oder
-lokale Entwicklung zu verändern.
-
-Salonfotos werden ohne Zoom und ohne Scrollverschiebung vollständig dargestellt.
-Mobil erhält die Bildfolge einen eigenen Rahmen; Galerie-Bilder behalten ihre
-Originalproportionen. Gelb bleibt dem Logo vorbehalten; die übrige Oberfläche
-verwendet neutrale Farben.
-
-Für einen automatisch aktuellen Instagram-Feed sind die Umstellung des derzeit
-persönlichen Kontos auf Business/Creator und eine offizielle Autorisierung noch
-erforderlich. Aktuell ist das Profil verlinkt, nicht als Live-Feed eingebunden.
-
-Der Einstieg ist kompakter; auf dem Handy steht das Gruppenbild vor der
-Teameinleitung. Die Kontaktüberschrift ist gefüllt und die Telefonnummer direkt
-zugeordnet. Für mobile Nutzer bleibt die feste Anrufleiste die primäre
-Terminaktion. Sprunglinks berücksichtigen den festen Header. Öffnungszeiten werden
-auf Wunsch des Auftraggebers weggelassen. Die bestehenden Preisbegriffe bleiben
-unverändert und erhalten keine zusätzlichen Erklärungen.
+[Logo-Paket](assets/brand/luethi-logo-paket.zip): SVG und transparente PNG-Dateien
+mit 2000 Pixeln Breite. Der Schriftzug wurde aus der vorhandenen Rastervorlage
+vektorisiert; Herkunft und Nutzungshinweise stehen in `assets/brand/README.txt`.
