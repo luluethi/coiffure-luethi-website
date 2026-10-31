@@ -1,4 +1,5 @@
 (() => {
+  document.documentElement.classList.add('js-nav');
   const button = document.querySelector('.menu-btn');
   const nav = document.querySelector('#navigation');
   const close = () => { nav.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); };

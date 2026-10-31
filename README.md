@@ -27,7 +27,7 @@ separat über die vorhandene Hosting-Konfiguration.
 
 ## Gestaltung und Inhalte
 
-Warme Naturtöne, lokale Systemschriften, Original-Schriftzug und optimierte
+Dunkles Olivgrau, warmes Papier, lokale Systemschriften, gelber Lüthi-Schriftzug und optimierte
 WebP-Bilder aus den vorhandenen JPG-Dateien. Die Originaldateien bleiben erhalten.
 Responsive Navigation mit Escape-Taste, sichtbare Tastaturfokusse und Rücksicht
 auf reduzierte Bewegung. Inhalte bleiben ohne JavaScript zugänglich.
@@ -37,3 +37,11 @@ Die übernommenen Preisangaben stehen weiterhin unter Bestätigungsvorbehalt.
 Impressum und vollständige Datenschutzhinweise müssen vor einer späteren
 Live-Veröffentlichung vom Salon bereitgestellt werden. Es wurden keine
 rechtlichen Angaben oder Öffnungszeiten erfunden.
+
+## Analyse und Markenführung
+
+Die kritische Bestandsaufnahme und die Regeln für das zusammenhängende Redesign
+stehen in [docs/redesign-analyse.md](docs/redesign-analyse.md). Das Logo unter
+`assets/luethi.svg` ist eine geglättete Vektorisierung des vorhandenen gelben
+Schriftzugs aus `assets/header_logo.jpg`; es enthält keinen COIFFURE-Zusatz und
+keine neue Bildmarke. Eine originale Vektordatei war im Repository nicht vorhanden.
