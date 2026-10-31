@@ -17,8 +17,8 @@ nicht erfunden.
 
 - Der bisherige Einstieg zeigte fast ausschliesslich die Einrichtung. Die
   Verbindung aus moderner Coiffure, Familienbetrieb und Stammkundschaft blieb
-  gestalterisch schwach. Jetzt führt eine gekennzeichnete Frisureninspiration in
-  das Angebot; echte Räume und Menschen bekommen jeweils eigene Abschnitte.
+  gestalterisch schwach. Jetzt steht das vom Auftraggeber gelieferte Gruppenfoto vor dem Salon
+  im Einstieg. Die Frisuren-Bildsammlung bleibt im Leistungs- und Galeriebereich.
 - Der gelbe Schriftzug war ursprünglich als kleines Rasterbild vergrössert und
   mit zusätzlichem COIFFURE-Text kombiniert. Jetzt wird nur der bekannte,
   vektorisierte Schriftzug verwendet. Das bewahrt den Wiedererkennungswert.
@@ -48,7 +48,7 @@ nicht erfunden.
 
 ## Zusammenspiel der Seiten
 
-1. Startseite: moderner Einstieg, Geschichte und Wiedersehen, Angebot,
+1. Startseite: Einstieg mit dem echten Teamfoto, Familienbetrieb seit 1987, Angebot,
    Original-Salonbilder, vollständiges Team und direkte Terminvereinbarung.
 2. Leistungen & Preise: Anker zu Damen, Herren, Farbe und Kindern; die elf
    übernommenen Preise unverändert. Hinweise und Terminfragen als native Details.
@@ -111,3 +111,24 @@ Die einmalige Aktivierung in GitHub Settings → Pages kann wegen des gesperrten
 GitHub-API-Zugriffs nicht durch den Agenten vorgenommen werden. Repo-Sichtbarkeit
 wird nicht geändert. Ein tatsächliches GitHub-Deployment muss gesondert bestätigt
 werden; lokale Tests belegen noch keine veröffentlichte Demo.
+
+
+## Teamfoto und Textüberarbeitung
+
+Das vom Auftraggeber hochgeladene `assets/TeamBild.jpg` bleibt unverändert im
+Repository. Zwei formatoptimierte WebP-Versionen (800/1800 Pixel, ohne Retusche)
+werden über srcset auf Start- und Teamseite ausgeliefert. Das Gruppenfoto wird
+im ursprünglichen Seitenverhältnis dargestellt, damit alle fünf Menschen im
+Bild bleiben. Der Startbereich wurde dafür auf ein breites Foto umgestellt.
+
+Die öffentliche Ansprache ist Sie. Texte auf allen vier Seiten wurden auf konkrete
+Angaben zu Betrieb, Team, Ort, Angebot und Terminvereinbarung reduziert. Die
+gesprächige, persönliche Atmosphäre wird mit der vom Auftraggeber beschriebenen
+langjährigen Kundschaft verbunden; keine neuen Auszeichnungen, Spezialisierungen,
+Biografien wurden ergänzt.
+
+Beide Buildvarianten bestehen den Inhaltscheck (107 lokale Verweise). Für
+GitHub Pages werden jetzt auch alle srcset-Kandidaten korrekt mit dem Projektpfad
+versehen. Die Browserprüfung umfasst vier Seiten bei 320, 390, 768 und 1440
+Pixeln, Bild- und Schriftladen, Navigation, Preisanker, Details, Galerie und
+Nutzung ohne JavaScript. Die elf ursprünglichen Preisbeträge bleiben unverändert.

@@ -59,7 +59,9 @@ vorhandenen Repository. Preise behalten ihren sichtbaren Bestätigungsvorbehalt.
 Öffnungszeiten, Bewertungen und biografische Angaben wurden nicht erfunden.
 Rechtliche Angaben müssen vor einem offiziellen Domainwechsel ergänzt werden.
 
-Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Frisurenbilder
+Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Das Gruppenbild
+`assets/TeamBild.jpg` steht auf Start- und Teamseite; optimierte WebP-Dateien
+unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert. Frisurenbilder
 werden als Inspiration aus der bestehenden Sammlung gekennzeichnet. Original-
 JPG-Dateien bleiben erhalten; die Website verwendet WebP-Versionen.
 

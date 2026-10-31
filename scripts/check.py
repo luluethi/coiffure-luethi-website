@@ -34,6 +34,8 @@ class Page(HTMLParser):
         if 'id' in attrs:
             assert attrs['id'] not in self.ids, f'Duplicate ID: {attrs["id"]}'
             self.ids.add(attrs['id'])
+        if 'srcset' in attrs:
+            self.refs.extend(candidate.strip().split()[0] for candidate in attrs['srcset'].split(','))
         if tag == 'h1':
             self.headings += 1
         for key in ('href', 'src'):

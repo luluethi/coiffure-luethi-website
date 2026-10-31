@@ -22,7 +22,13 @@ async function prefixUrls(directory) {
       await prefixUrls(path);
     } else if (entry.name.endsWith('.html')) {
       const html = await readFile(path, 'utf8');
-      await writeFile(path, html.replace(/\b(href|src)="\/(?!\/)/g, `$1="${basePath}/`));
+      const prefixed = html
+        .replace(/\b(href|src)="\/(?!\/)/g, `$1="${basePath}/`)
+        .replace(/\bsrcset="([^"]*)"/g, (_, candidates) =>
+          `srcset="${candidates.split(',').map(candidate =>
+            candidate.trim().replace(/^\/(?!\/)/, `${basePath}/`)
+          ).join(', ')}"`);
+      await writeFile(path, prefixed);
     } else if (entry.name.endsWith('.css')) {
       const css = await readFile(path, 'utf8');
       await writeFile(path, css.replace(/url\((['"]?)\/(?!\/)/g, `url($1${basePath}/`));
