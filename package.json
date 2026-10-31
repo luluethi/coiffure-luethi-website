@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "dev": "python3 -m http.server 8000 --bind 0.0.0.0"
+    "dev": "python3 -m http.server 8000 --bind 0.0.0.0",
+    "check": "node --check assets/site.js && python3 scripts/check.py"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

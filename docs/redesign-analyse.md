@@ -1,55 +1,99 @@
-# Analyse und Gestaltungsgrundlage
+# Coiffure Lüthi — ganzheitlicher Rework
 
-## Leitlinie
+## Grundlage
 
-Ein moderner Familienbetrieb mit Geschichte, hoher Qualität und persönlichem
-Service. Die Gestaltung vermittelt diese Haltung durch Originalbilder, echte
-Menschen, klare Informationen und sorgfältige Details. Das Logo besteht allein
-aus dem gelben Lüthi-Schriftzug.
+Vom Auftraggeber bestätigt: Familienbetrieb in Wohlen seit 1987, mit hoher
+Stammkundschaft. Modernisierung soll gewachsene Vertrautheit und zeitgemässe
+Gestaltung verbinden. Persönliche Angaben beschränken sich auf die freigegebenen
+Informationen und die vorhandenen Teamrollen.
 
-## Befund über die gesamte Website
+Team, Kontaktdaten, Leistungen und Preisbeträge stammen aus dem bestehenden
+Repository. Die bisherigen Preise bleiben mit Bestätigungsvorbehalt versehen.
+Gründungsjahr 1987 und Stammkundschaft wurden im Auftrag ergänzt. Weitere
+historische Meilensteine, Öffnungszeiten, Bewertungen oder neue Angebote wurden
+nicht erfunden.
 
-| Bereich | Befund vor dieser Überarbeitung | Konsequenz |
-| --- | --- | --- |
-| Identität | Der kleine isolierte Logo-Ausschnitt wurde mit einem zusätzlichen COIFFURE-Label kombiniert. Die gelbe Marke spielte im übrigen Design kaum eine Rolle. | Nur der gelbe Schriftzug, als SVG aus der grösseren vorhandenen Bilddatei nachgezeichnet. Dunkler Hintergrund für Sichtbarkeit. Gelb gezielt bei Kontakt und Navigation. |
-| Einstieg | Dunkler Bildfilter und mehrere austauschbare Werbezeilen verdeckten den realen Salon. | Heller, grossflächiger Originaleinblick neben einer konkreten Orts- und Betriebsangabe. Keine automatische Slideshow. |
-| Familienbetrieb | Der Begriff stand im Text, auf der Startseite waren nur zwei von fünf Menschen zu sehen. | Alle fünf Personen schon auf der Startseite. Auf der Teamseite Inhaber zuerst, dann die übrigen Mitglieder; Rollen unverändert. |
-| Geschichte | Gründungsjahr, Chronik und historische Fotografien fehlen im Repository. | Keine erfundene Tradition, Generationenfolge oder Jahreszahl. Vorhandene Räume, Name und Familie tragen die Identität. Eine Chronik braucht belegte Angaben des Salons. |
-| Leistungen | Drei generische Karten, darunter Beratung, bildeten die bestehende Preisliste nicht vollständig ab. | Damen, Herren, Farbe und Kinder als nachvollziehbare Einstiege mit direkten Ankern in der Preisliste. |
-| Preise | Übernommene Preise stehen unter Bestätigungsvorbehalt. | Alle elf Positionen und Beträge bleiben erhalten. Richtpreis-Hinweis steht vor der Liste; keine neuen Preise oder Pakete. |
-| Salon | Wiederholte allgemeine Alternativtexte, fehlende Bildunterschriften und auf Mobilgeräten ausgeblendete Inspirationsbilder. | Konkrete Bildbeschreibungen und Bildunterschriften; Empfang, Bedienplätze, Waschplätze und Aussenansicht. Alle sechs Inspirationsbilder bleiben mobil sichtbar. |
-| Kontakt | Mehrere unterschiedlich formulierte Handlungsaufforderungen führten teils zum Kontaktbereich, teils zum Telefon. | Hauptaktion stets telefonische Terminvereinbarung. Adresse, Telefon und E-Mail in einem gemeinsamen Kontaktbereich auf allen Seiten. |
-| Texte | Wiederholte Formeln über Haargefühl und Persönlichkeit ohne zusätzliche Information. | Kürzere Texte mit Personen, Ort und Leistungen; keine unbelegten Qualitäts- oder Erfahrungssuperlative. |
-| Technik | Vier statische Seiten, gemeinsames CSS/JS und Build ohne Paketabhängigkeiten sind eine passende Grundlage. Mobile Navigation war ohne JS verborgen; Bildabmessungen waren pauschal. | Struktur bleibt. Navigation funktioniert auch ohne JS, tatsächliche Bildabmessungen, seitenspezifische Beschreibungen, separates SVG statt Base64-Kopie. |
-| Veröffentlichung | Preise und vollständige rechtliche Texte sind nicht abschliessend bestätigt. | In README dokumentiert; keine erfundenen Rechtsangaben. Kein Merge und kein Live-Deployment. |
+## Kritische Bestandsaufnahme
 
-## Gestaltungsregeln
+- Der bisherige Einstieg zeigte fast ausschliesslich die Einrichtung. Die
+  Verbindung aus moderner Coiffure, Familienbetrieb und Stammkundschaft blieb
+  gestalterisch schwach. Jetzt führt eine gekennzeichnete Frisureninspiration in
+  das Angebot; echte Räume und Menschen bekommen jeweils eigene Abschnitte.
+- Der gelbe Schriftzug war ursprünglich als kleines Rasterbild vergrössert und
+  mit zusätzlichem COIFFURE-Text kombiniert. Jetzt wird nur der bekannte,
+  vektorisierte Schriftzug verwendet. Das bewahrt den Wiedererkennungswert.
+- Unterschiedliche Werbezeilen ersetzten die fehlende Geschichte. Das bestätigte
+  Jahr 1987 und die Beziehung zur Stammkundschaft geben jetzt einen konkreten
+  Schwerpunkt, ohne eine Chronik zu erfinden.
+- Die vier Seiten brauchen dieselbe gestalterische Sprache. Eine gemeinsame
+  Schrift-, Farb- und Abstandsdefinition, wiederkehrende Bildunterschriften,
+  Linkformen, Teamkarten und Kontaktbereiche verbinden sie.
+- Auf kleinen Bildschirmen reichen verkleinerte Desktopansichten nicht aus:
+  eigenständige Anordnung der Bilder, lesbare Texte, sichtbare Telefonnummer,
+  vollständige Navigation und bedienbare Bildvergrösserung sind notwendig.
 
-- Dunkles Olivgrau, warmes Papier und das Gelb des bestehenden Schriftzugs.
-- Serifentypografie für Überschriften; gut lesbare sachliche Navigation und Texte.
-- Originalaufnahmen in ihrer natürlichen Farbigkeit, keine erfundenen Salonbilder.
-- Wiederkehrende Abstände, Linien, Bildunterschriften und Linkformen über alle Seiten.
-- Ruhige Einblendungen nur als Ergänzung; bei reduzierter Bewegung deaktiviert.
-- Keine extern geladenen Schriften, Buchungsdienste, Tracker oder Karten-Embeds.
+## Gestaltungssystem
 
-## Logo-Herkunft und Grenzen
+- Schriftzug: Lüthi, Hauptfarbe Gelb `#FFDF00`, auf dunklem Grund `#292B25`.
+- Flächen: warmes Papier `#F8F5EF`, Stein `#EAE5DC`, zurückhaltendes Oliv.
+- Überschriften: Cormorant Garamond, aufrechte und kursive Schnitte; Text und
+  Navigation: Manrope. Lokal gespeicherte WOFF2-Dateien, SIL Open Font License.
+- Fotografie: vorhandene Schwarzweiss-Frisurenbilder als Inspiration; Team und
+  Location ausschliesslich unveränderte Originalaufnahmen. Keine KI-Team- oder
+  KI-Salonbilder. Die Inspiration wird nicht als eigene Arbeitsreferenz behauptet.
+- Gestaltung: klare Bildkanten, grosszügige Zwischenräume, schmale Linien und
+  gezielt eingesetztes Gelb. Keine automatisch laufenden Karussells.
+- Bewegung: dezente Einblendungen und Hovereffekte. `prefers-reduced-motion`
+  deaktiviert Bewegung. Die Inhalte bleiben ohne JavaScript sichtbar.
 
-`assets/luethi.svg` wurde aus dem gelben Schriftzug in `assets/header_logo.jpg`
-isoliert und als geglättete Kontur vektorisiert. Keine neue Schrift und keine
-Bildmarke wurden hinzugefügt. Der Schatten und das alte Banner gehören nicht zum
-verwendeten Logo. Das SVG skaliert ohne Pixelkanten, ist aber eine Aufbereitung
-der vorhandenen Rastervorlage und keine wiederhergestellte Original-Vektordatei.
-Eine spätere Originaldatei kann unter demselben Asset-Pfad eingesetzt werden.
+## Zusammenspiel der Seiten
 
-## Validierung dieser Umsetzung
+1. Startseite: moderner Einstieg, Geschichte und Wiedersehen, Angebot,
+   Original-Salonbilder, vollständiges Team und direkte Terminvereinbarung.
+2. Leistungen & Preise: Anker zu Damen, Herren, Farbe und Kindern; die elf
+   übernommenen Preise unverändert. Hinweise und Terminfragen als native Details.
+3. Team: fünf echte Personen mit den bisherigen Rollen. Dieter und Doris zuerst;
+   die drei übrigen Mitglieder folgen. Keine erfundenen Biografien.
+4. Salon & Galerie: fünf Originalaufnahmen mit Bildbeschreibung und zugänglicher
+   Vergrösserung. Separater Inspirationsbereich mit allen sechs Frisurenbildern.
 
-- `npm run build` erzeugt alle vier Seiten und die lokalen Assets unter `dist`.
-- Chromium: vier Seiten jeweils bei 375, 390, 768 und 1440 Pixeln; keine
-  horizontalen Überläufe, defekten Bilder oder JavaScript-Laufzeitfehler.
-- 85 interne Asset-, Seiten- und Fragmentverweise auf vorhandene Ziele geprüft.
-- Alle elf ursprünglichen Preisbeträge und ihre Reihenfolge unverändert geprüft.
-- Desktop- und Smartphone-Screenshots zur Beurteilung von Bildausschnitten,
-  Hierarchie und Schriftzug visuell kontrolliert.
-- Zusätzlich 320-Pixel-Ansicht mit tatsächlichen Menüklicks, direkter Einstieg
-  zur Farbpreisliste, sichtbare Navigation ohne JavaScript auf allen vier Seiten
-  und Einblendungen bei normaler Bewegung erfolgreich geprüft.
+Die gemeinsame Hauptaktion führt zum Telefon. Adresse und E-Mail stehen auf
+jeder Seite. Die mobile Kontaktleiste enthält die sichtbare Telefonnummer.
+
+## Logo-Paket
+
+`assets/brand/luethi-logo-paket.zip` enthält SVG und transparente PNG-Dateien
+(2000 Pixel breit) in Gelb, Dunkel und Elfenbein sowie Hinweise zur Verwendung.
+Der gelbe Schriftzug ist die Hauptversion. Die Form stammt aus der geglätteten
+Vektorisierung des vorhandenen Banners `assets/header_logo.jpg`, nicht aus einer
+neu erfundenen Handschrift oder einer angeblich wiederhergestellten Vektordatei.
+
+## Technik und Veröffentlichung
+
+Vier bestehende HTML-Seiten, gemeinsames CSS/JavaScript, kein Framework, keine
+Paketabhängigkeiten für Build oder Betrieb. Ein lokales Build-Skript erstellt
+`dist`; Netlify nutzt `npm run build` und `dist` laut `netlify.toml`.
+
+`npm run check` kontrolliert die gebauten Seiten, interne Asset-/Seitenverweise,
+Anker, Font-Dateien, Logo-XML und JavaScript-Syntax. Browserchecks prüfen zusätzlich
+Darstellung und Interaktion. Die originale Website ausserhalb dieses Repositorys
+wird durch diese Änderungen nicht bearbeitet.
+
+Vor einer späteren offiziellen Veröffentlichung mit eigener Salon-Domain bleiben
+die Bestätigung der Preise und die Vervollständigung rechtlicher Texte durch den
+Salon erforderlich. Für das freigegebene Netlify-Projekt ist die Veröffentlichung
+dieses Reworks vom Auftraggeber erlaubt.
+
+## Geprüfter Stand
+
+- Produktionsbuild und `npm run check` erfolgreich: vier Seiten, 102 interne
+  Seiten-/Asset-/Fragmentverweise, CSS-Font-Ressourcen und SVG-Dateien.
+- Chromium auf 320, 375, 390, 768, 1440 und 1920 Pixeln: keine horizontalen
+  Überläufe, fehlenden Bilder, Font-Ladefehler oder JavaScript-Laufzeitfehler.
+- Mobile Navigation inklusive Escape, native Preis-Details, direkter Farbpreis-
+  Einstieg sowie Galerie-Dialog inklusive Fokusrückgabe erfolgreich geprüft.
+- Alle vier Seiten ohne JavaScript mit sichtbarem Inhalt und Navigation geprüft.
+- Alle elf ursprünglichen Preisbeträge und deren Reihenfolge unverändert.
+- Alle drei Logo-PNGs mit 2000 × 829 Pixeln und transparentem Hintergrund geprüft.
+- Desktop-, Tablet- und Smartphoneansichten visuell geprüft; die Tablet-Proportionen
+  des Einstiegs wurden nach dieser Kontrolle nochmals angepasst.

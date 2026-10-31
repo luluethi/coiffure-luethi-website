@@ -1,47 +1,60 @@
-# Coiffure Lüthi · Website
+# Coiffure Lüthi — Familienbetrieb in Wohlen seit 1987
 
-Statische Website mit vier Seiten: Startseite, Leistungen & Preise, Team und Salon.
-HTML, CSS und JavaScript ohne Framework oder kostenpflichtige Dienste. Inhalte,
-Preise, Team und Kontaktdaten basieren auf dem vorhandenen Repository.
+Vier statische Seiten: Startseite, Leistungen & Preise, Team und Salon.
+Gemeinsames Designsystem mit lokal geladenen Schriften, dem gelben Lüthi-Logo
+und optimierten Originalbildern. Keine kostenpflichtigen Dienste, kein Framework
+und keine Paketinstallation für Build oder Betrieb.
 
-## Lokal entwickeln
+## Entwicklung
 
-Voraussetzungen: Node.js 22 oder neuer, Python 3 für den lokalen Webserver.
-Keine Paketinstallation erforderlich.
+Node.js 22 oder neuer; Python 3 für Webserver und Inhaltsprüfung.
 
 ```sh
 npm run dev
 ```
 
-## Build und Netlify
+## Produktionsbuild und Prüfung
 
 ```sh
 npm run build
+npm run check
 python3 -m http.server 8000 --directory dist
 ```
 
-`netlify.toml` definiert `npm run build` und das Ausgabeverzeichnis `dist`.
-Die Änderungen enthalten keinen Deployment-Aufruf. Eine bestehende Live-Site
-wird durch diese lokalen Befehle nicht verändert. Veröffentlichung erfolgt
-separat über die vorhandene Hosting-Konfiguration.
+Netlify: Build `npm run build`, Veröffentlichungsverzeichnis `dist`; siehe
+`netlify.toml`. Die Netlify-Site soft-empanada-97cf3d verwendet den Production-
+Branch `main`. Ein Push kann dort ein Deployment auslösen. Die originale Website
+ausserhalb dieses Repositorys ist nicht Bestandteil dieser Implementierung.
 
-## Gestaltung und Inhalte
+## Inhalte und Gestaltung
 
-Dunkles Olivgrau, warmes Papier, lokale Systemschriften, gelber Lüthi-Schriftzug und optimierte
-WebP-Bilder aus den vorhandenen JPG-Dateien. Die Originaldateien bleiben erhalten.
-Responsive Navigation mit Escape-Taste, sichtbare Tastaturfokusse und Rücksicht
-auf reduzierte Bewegung. Inhalte bleiben ohne JavaScript zugänglich.
+[Analyse und Designsystem](docs/redesign-analyse.md) beschreiben die Leitlinie
+und das Zusammenspiel aller Seiten. Das bestätigte Gründungsjahr ist 1987.
+Teammitglieder, Rollen, Kontaktdaten und elf Preispositionen basieren auf dem
+vorhandenen Repository. Preise behalten ihren sichtbaren Bestätigungsvorbehalt.
+Öffnungszeiten, Bewertungen und biografische Angaben wurden nicht erfunden.
+Rechtliche Angaben müssen vor einem offiziellen Domainwechsel ergänzt werden.
 
-Terminvereinbarung erfolgt telefonisch; es wird kein Buchungsdienst eingebunden.
-Die übernommenen Preisangaben stehen weiterhin unter Bestätigungsvorbehalt.
-Impressum und vollständige Datenschutzhinweise müssen vor einer späteren
-Live-Veröffentlichung vom Salon bereitgestellt werden. Es wurden keine
-rechtlichen Angaben oder Öffnungszeiten erfunden.
+Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Frisurenbilder
+werden als Inspiration aus der bestehenden Sammlung gekennzeichnet. Original-
+JPG-Dateien bleiben erhalten; die Website verwendet WebP-Versionen.
 
-## Analyse und Markenführung
+Manrope und Cormorant Garamond werden lokal geladen. Die SIL-OFL-Lizenzen liegen
+unter `assets/fonts`. Keine Anfragen an externe Font-Dienste, keine Tracker und
+keine eingebettete Karte. Google Maps öffnet nur nach Klick einen externen Link.
 
-Die kritische Bestandsaufnahme und die Regeln für das zusammenhängende Redesign
-stehen in [docs/redesign-analyse.md](docs/redesign-analyse.md). Das Logo unter
-`assets/luethi.svg` ist eine geglättete Vektorisierung des vorhandenen gelben
-Schriftzugs aus `assets/header_logo.jpg`; es enthält keinen COIFFURE-Zusatz und
-keine neue Bildmarke. Eine originale Vektordatei war im Repository nicht vorhanden.
+## Logo separat verwenden
+
+[Logo-Paket herunterladen](assets/brand/luethi-logo-paket.zip): gelbe Hauptversion
+sowie einfarbige Alternativen als SVG und transparente PNG (2000 Pixel breit).
+Das Logo besteht nur aus dem Schriftzug; die vertraute Form wurde als Vektor
+aus der vorhandenen Rastervorlage aufbereitet. Herkunft und Einsatzhinweise
+stehen in `assets/brand/README.txt`.
+
+## Bedienung
+
+Mobile Navigation mit Escape-Taste, sichtbare Tastaturfokusse, Sprunglink,
+reduzierte Bewegung und ohne JavaScript sichtbare Inhalte/Navigation. Die
+Salon-Galerie nutzt einen nativen Dialog mit Escape-Taste und Fokusrückgabe;
+ohne JavaScript öffnen die Bildlinks direkt das Originalbild. Terminvereinbarung
+führt direkt zu `tel:+41566226040`.
