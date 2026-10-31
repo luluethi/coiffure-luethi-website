@@ -33,8 +33,8 @@ responsiv ausgeliefert und ohne Beschnitt dargestellt.
 
 Die während der Erprobung erzeugten KI-Porträts wurden vom Auftraggeber als
 zu künstlich verworfen. Sie sind nicht im Repository und werden nicht ausgeliefert.
-Die Inspirationsgalerie enthält ausschliesslich die bereits vorhandene
-Frisuren-Bildsammlung. Das Instagram-Profil ist die Verbindung zu aktuellen
+Die frühere allgemeine Modebild-Galerie wird nicht mehr auf der Website gezeigt.
+Die Dateien bleiben als bestehender Bestand im Repository erhalten. Das Instagram-Profil ist die Verbindung zu aktuellen
 eigenen Inhalten des Salons; es werden keine Beiträge automatisch kopiert.
 
 ## Bewegung und Bedienung
@@ -93,3 +93,30 @@ offizieller dynamischer Feed erfordert ein professionelles Konto und eine
 autorisierte API-Verbindung; diese Voraussetzungen sind noch nicht vorhanden.
 Bis dahin bleibt der Profil-Link bestehen. Es wurde weder ein Feed vorgetäuscht
 noch der Kontotyp des Salons verändert.
+
+
+## Lesbarkeit, mobile Gewichtung und Kontakt
+
+Die Schriftzug-Breite im Desktop-Einstieg ist von 840 auf maximal 560 Pixel
+reduziert. Mobil ist der Einstieg kürzer, das Gruppenfoto steht vor der
+Teameinleitung. Bei 390 × 844 Pixeln beginnt das Foto jetzt bei etwa 640 statt
+1190 Pixeln. Die dauerhafte Telefonleiste übernimmt mobil die Terminaktion;
+der zusätzliche Hero-Terminbutton wird dort ausgeblendet.
+
+Grundschrift 17 Pixel, grössere Begleittexte und Bildunterschriften, mindestens
+44 Pixel hohe Bildsteuerungen, Preis-Kategorielinks und zentrale Kontaktaktionen.
+Sprunglinks berücksichtigen die feste Header-Höhe, damit Preisüberschriften nach
+der Navigation sichtbar bleiben. Der Kontaktbereich verwendet eine gefüllte
+Überschrift und direkt daneben die Telefonnummer; der zusätzliche Pfeilkreis
+und die riesige doppelte Kontur-Überschrift sind entfernt.
+
+Die Salonseite zeigt ausschliesslich eigene Räume; der frühere Modelbereich ist
+durch einen direkten Instagram-Verweis ersetzt. Es wird keine neue Arbeit
+behauptet und kein Feed vorgetäuscht.
+
+Geprüft: alle vier Seiten auf sechs Breiten, mobile Reihenfolge und Grössen
+bei 320/390/768/1440 Pixeln, mindestens 44 Pixel grosse Bildsteuerung und sichtbar
+unterhalb des Headers angesprungene Farbpreis-Überschrift. Die elf ursprünglichen
+Preispositionen bleiben unverändert. Der Auftraggeber möchte
+keine Öffnungszeiten veröffentlichen. Die bestehenden Preisbezeichnungen bleiben
+auf ausdrücklichen Wunsch unverändert und werden nicht zusätzlich erklärt.

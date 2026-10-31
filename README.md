@@ -61,9 +61,9 @@ Rechtliche Angaben müssen vor einem offiziellen Domainwechsel ergänzt werden.
 
 Team und Salon zeigen ausschliesslich vorhandene Originalfotos. Das Gruppenbild
 `assets/TeamBild.jpg` steht im Teamabschnitt der Startseite; optimierte WebP-Dateien
-unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert. Frisurenbilder
-werden als Inspiration aus der bestehenden Sammlung gekennzeichnet. Original-
-JPG-Dateien bleiben erhalten; die Website verwendet WebP-Versionen.
+unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert. Die allgemeinen Modebilder
+werden nicht mehr als Galerie angezeigt. Original-JPG-Dateien bleiben erhalten;
+die Website verwendet WebP-Versionen.
 
 Manrope wird lokal in 400, 600 und 800 geladen. Die SIL-OFL-Lizenz liegt
 unter `assets/fonts`. Keine Anfragen an externe Font-Dienste, keine Tracker und
@@ -109,3 +109,10 @@ verwendet neutrale Farben.
 Für einen automatisch aktuellen Instagram-Feed sind die Umstellung des derzeit
 persönlichen Kontos auf Business/Creator und eine offizielle Autorisierung noch
 erforderlich. Aktuell ist das Profil verlinkt, nicht als Live-Feed eingebunden.
+
+Der Einstieg ist kompakter; auf dem Handy steht das Gruppenbild vor der
+Teameinleitung. Die Kontaktüberschrift ist gefüllt und die Telefonnummer direkt
+zugeordnet. Für mobile Nutzer bleibt die feste Anrufleiste die primäre
+Terminaktion. Sprunglinks berücksichtigen den festen Header. Öffnungszeiten werden
+auf Wunsch des Auftraggebers weggelassen. Die bestehenden Preisbegriffe bleiben
+unverändert und erhalten keine zusätzlichen Erklärungen.
