@@ -87,12 +87,12 @@ führt direkt zu `tel:+41566226040`.
 
 ## Bildsprache und Animationen
 
-Der Einstieg zeigt drei manuell wechselbare Original-Salonansichten hinter dem
-grossen gelben Schriftzug. Darauf folgen Team, Leistungen und der direkte Link
+Der Einstieg zeigt vier manuell wechselbare Original-Salonansichten. Den Anfang
+macht die Aussenansicht; der gelbe Schriftzug steht als Markenzeichen darüber. Darauf folgen Team, Leistungen und der direkte Link
 zu [@coiffureluethi](https://www.instagram.com/coiffureluethi/). Es werden keine
 Instagram-Posts nachgebaut und keine KI-Porträts ausgeliefert.
 
-Scroll-Einblendungen, Bildmaske, Hintergrundversatz und Seitenübergänge ergänzen
+Scroll-Einblendungen, Bildmaske und Seitenübergänge ergänzen
 die Gestaltung. Animationen lassen sich im Footer pausieren; die lokale Präferenz
 bleibt erhalten. Reduzierte Bewegung des Betriebssystems hat Vorrang. Die Galerie
 unterstützt Vor/Zurück, Pfeiltasten und Escape.
@@ -100,3 +100,12 @@ unterstützt Vor/Zurück, Pfeiltasten und Escape.
 Der Build versieht CSS und JavaScript mit einem Inhalts-Hash im Dateinamen.
 Dadurch erhält ein neues Deployment neue Asset-URLs, ohne Quelldateinamen oder
 lokale Entwicklung zu verändern.
+
+Salonfotos werden ohne Zoom und ohne Scrollverschiebung vollständig dargestellt.
+Mobil erhält die Bildfolge einen eigenen Rahmen; Galerie-Bilder behalten ihre
+Originalproportionen. Gelb bleibt dem Logo vorbehalten; die übrige Oberfläche
+verwendet neutrale Farben.
+
+Für einen automatisch aktuellen Instagram-Feed sind die Umstellung des derzeit
+persönlichen Kontos auf Business/Creator und eine offizielle Autorisierung noch
+erforderlich. Aktuell ist das Profil verlinkt, nicht als Live-Feed eingebunden.

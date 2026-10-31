@@ -14,7 +14,7 @@
   function updateScroll() {
     frame = 0;
     header.classList.toggle('is-scrolled', scrollY > 30);
-    if (hero) hero.style.setProperty('--hero-shift', !paused ? `${Math.min(scrollY * .13, 120)}px` : '0px');
+    // Salon photos stay fixed in their original framing: no pan or camera zoom.
   }
   function setMotion(value, remember = false) {
     paused = value || reduced.matches;

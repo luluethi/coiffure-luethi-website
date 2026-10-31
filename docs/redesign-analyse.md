@@ -42,7 +42,7 @@ eigenen Inhalten des Salons; es werden keine Beiträge automatisch kopiert.
 - Der Schriftzug wird beim Einstieg über eine Maske eingeblendet; Begleittext
   erscheint leicht versetzt. Die Original-Salonansichten wechseln nur manuell
   mit Vor/Zurück, Zähler und Bildbezeichnung. Keine automatische Slideshow.
-- Ein leichter Scrollversatz gibt dem Hintergrund räumliche Tiefe. Der Header
+- Salonfotos bleiben ohne Zoom oder Scrollversatz im Originalausschnitt. Der Header
   erhält beim Scrollen einen dunklen,
   transparenten Hintergrund. Der native Browser-Scroll bleibt erhalten.
 - Text erscheint beim Scrollen; das Teamfoto wird über eine Bildmaske aufgedeckt.
@@ -65,6 +65,31 @@ GitHub Pages nutzt `main` und den unterstützten Projekt-Unterpfad.
 Geprüft: Produktionsbuild und interne Verweise für Domain-Wurzel und Pages-Pfad;
 alle vier Seiten bei 320, 375, 390, 768, 1440 und 1920 Pixeln; Bilder, lokale
 Schriften, Navigation und Nutzung ohne JavaScript. Zusätzliche Tests mit normaler
-Bewegung prüfen Maskenanimation, manuellen Szenenwechsel, Scrollversatz,
+Bewegung prüfen Maskenanimation, manuellen Szenenwechsel, unveränderten Bildausschnitt,
 Headerverhalten und gespeicherte Pausenpräferenz. Preise bleiben unverändert.
 Die originale Salon-Website ausserhalb des Repositorys wird nicht verändert.
+
+
+## Präzisierung: Logo-Farbe und natürliche Bildausschnitte
+
+Gelb wird ausschliesslich für den Lüthi-Schriftzug verwendet. Buttons, Links,
+Fokusränder, Nummern und dekorative Punkte verwenden neutrale helle Farben.
+Farben innerhalb der unveränderten Originalfotografien bleiben erhalten.
+
+Die Bildfolge beginnt mit dem Salon von aussen, gefolgt von Bedienplätzen,
+Innenansicht und Empfang. Im Startbereich werden alle vier Bilder vollständig
+über contain gezeigt, ohne Vergrösserung oder Hintergrundverschiebung. Auf
+Smartphones erhält das Foto einen eigenen Rahmen im Originalseitenverhältnis.
+Die Salon-Galerie verwendet natürliche Bildhöhen statt erzwungener Quer-/Hochformate;
+auch der Hover-Zoom ist entfernt. Überblendungen und Schrift-/Bildmasken bleiben.
+
+Zusätzlich geprüft: alle vier Hero-Bilder ohne Zoom/Pan sowie alle fünf
+Galeriefotos mit identischen Original-/Darstellungsproportionen bei 320, 390,
+768, 1440 und 1920 Pixeln. Allgemeine Browserprüfung aller vier Seiten bei sechs
+Breiten und beide Produktionsbuilds erfolgreich.
+
+Der Auftraggeber hat das Instagram-Konto als persönliches Konto bestätigt. Ein
+offizieller dynamischer Feed erfordert ein professionelles Konto und eine
+autorisierte API-Verbindung; diese Voraussetzungen sind noch nicht vorhanden.
+Bis dahin bleibt der Profil-Link bestehen. Es wurde weder ein Feed vorgetäuscht
+noch der Kontotyp des Salons verändert.
