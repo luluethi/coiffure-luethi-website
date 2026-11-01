@@ -184,3 +184,14 @@ html.motion-off::view-transition-old(root), html.motion-off::view-transition-new
  ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
  .js-motion .reveal, .js-motion .image-reveal { opacity: 1; transform: none; clip-path: none; }
 }
+
+/* Visit information belongs to the salon page, alongside its contact details. */
+.opening-hours { display: grid; grid-template-columns: 1fr 1.2fr; gap: 45px; margin-top: 35px; padding-top: 30px; border-top: 1px solid #bfb3c5; }
+.opening-hours h3 { font-size: 28px; }
+.opening-hours dl { margin: 0; width: 100%; max-width: 510px; font-size: 16px; }
+.opening-hours dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-block: 9px; }
+.opening-hours dd { margin: 0; text-align: right; white-space: nowrap; }
+.opening-hours dd > span { display: block; }
+@media (max-width: 760px) {
+ .opening-hours { grid-template-columns: 1fr; gap: 20px; padding-top: 25px; }
+}
