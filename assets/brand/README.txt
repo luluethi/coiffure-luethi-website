@@ -1,7 +1,8 @@
 LÜTHI — LOGO-PAKET
 
-Der gelbe Lüthi-Schriftzug ist das Hauptlogo. Ohne COIFFURE-Zusatz,
-Schatten oder zusätzliche Bildmarke verwenden.
+Der gelbe Lüthi-Schriftzug ist das Hauptlogo. Die Logo-Dateien bleiben
+ohne Zusatz, Schatten oder zusätzliche Bildmarke. Auf der Website wird
+ein separater COIFFURE-Text oberhalb des Schriftzugs ergänzt.
 
 luethi-yellow.svg / .png: Hauptlogo auf dunklem Hintergrund
 luethi-ink.svg / .png: einfarbige Alternative auf hellem Hintergrund

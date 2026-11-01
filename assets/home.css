@@ -1,9 +1,9 @@
 /* A typographic brand, tactile hair art, then the real people and place. */
 .brand-hero { padding-top: 34px; }
 .hero-top { display: grid; grid-template-columns: 1.7fr 1fr; align-items: end; gap: 35px; margin-bottom: 30px; }
-.hero-category { display: block; font-size: 15px; letter-spacing: -.015em; margin-bottom: 20px; }
 .hero-name { display: block; overflow: hidden; padding-block: 8px 22px; margin-bottom: -22px; }
-.hero-name > span { display: block; font-size: clamp(150px, 22.5vw, 325px); font-weight: 600; letter-spacing: -.09em; line-height: .95; margin-left: -.045em; }
+.hero-name > span { display: block; font-size: clamp(76px, 10.4vw, 150px); font-weight: 600; letter-spacing: -.075em; line-height: 1.05; margin-left: -.045em; }
+.hero-location { display: block; font-size: clamp(64px, 8.7vw, 126px); letter-spacing: -.075em; line-height: 1.1; margin-top: 8px; }
 .hero-intro { justify-self: end; padding-bottom: 5px; }
 .hero-intro p { font-size: 16px; line-height: 1.7; margin-bottom: 28px; }
 .hero-art { position: relative; aspect-ratio: 2.75; border-radius: 160px 20px 20px 20px; overflow: hidden; background: #b8aeb8; }
@@ -54,13 +54,15 @@
 .instagram-line > span { color: var(--muted); }
 .instagram-line > a { display: inline-flex; gap: 30px; align-items: center; min-height: 44px; }
 .js-motion .hero-name > span { animation: brand-in 1.05s cubic-bezier(.16,1,.3,1) both; }
+.js-motion .hero-location { animation: content-in 1s .08s both; }
 .js-motion .hero-intro { animation: content-in 1s .15s both; }
 .js-motion .hero-art { animation: art-in 1.2s cubic-bezier(.2,.7,.3,1) both; }
 @keyframes brand-in { from { transform: translateY(120%); } to { transform: none; } }
 @keyframes art-in { from { opacity: 0; clip-path: inset(0 0 100% 0 round 160px 20px 20px 20px); } to { opacity: 1; clip-path: inset(0 round 160px 20px 20px 20px); } }
 @media (max-width: 1100px) {
  .hero-top { grid-template-columns: 1.4fr 1fr; }
- .hero-name > span { font-size: 23vw; }
+ .hero-name > span { font-size: 10vw; }
+ .hero-location { font-size: 8.5vw; }
  .hero-intro p { font-size: 14px; }
  .hero-intro .button { font-size: 12px; gap: 24px; padding-inline: 20px; }
  .hero-art { aspect-ratio: 2.35; }
@@ -75,9 +77,9 @@
 @media (max-width: 760px) {
  .brand-hero { padding-top: 35px; }
  .hero-top { grid-template-columns: 1fr; gap: 22px; margin-bottom: 30px; }
- .hero-category { font-size: 13px; margin-bottom: 15px; }
  .hero-name { padding-block: 5px 15px; margin-bottom: -15px; }
- .hero-name > span { font-size: 34.5vw; }
+ .hero-name > span { font-size: 18vw; }
+ .hero-location { font-size: 16.8vw; margin-top: 5px; }
  .hero-intro { justify-self: stretch; padding: 0; }
  .hero-intro p { font-size: 15px; margin: 0; }
  .hero-intro .button { font-size: 13px; padding: 13px 20px; gap: 30px; min-height: 50px; margin-top: 20px; }

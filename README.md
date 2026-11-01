@@ -39,7 +39,8 @@ Salon-Website ausserhalb des Repositorys wird nicht verändert.
 
 ## Komposition und Bedienung
 
-Die Startseite beginnt mit dem gross gesetzten Namen Lüthi und einem eigens
+Das gelbe Logo wird im Kopf- und Fussbereich mit dem Zusatz Coiffure kombiniert.
+Die Startseite beginnt mit «Coiffure in Wohlen.» und einem eigens
 KI-generierten abstrakten Haar-Stillleben ohne Menschen. Die bisherigen
 Model-/Inspirationsaufnahmen prägen das Design nicht mehr. Danach folgen fünf
 versetzt angeordnete Originalporträts, das Angebot und echte Aussen-/Innenansichten.

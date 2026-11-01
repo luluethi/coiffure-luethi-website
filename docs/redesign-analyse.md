@@ -3,8 +3,9 @@
 ## Ausgangslage
 
 Der vorige Entwurf orientierte sich weiter an vorhandenen Modelaufnahmen. Das
-passte nicht zum gewünschten eigenständigen Auftritt. Die neue Gestaltung setzt
-beim Namen Lüthi an: grosse, offene Sans-Serif-Typografie und ein abstraktes
+passte nicht zum gewünschten eigenständigen Auftritt. Die Gestaltung verbindet das gelbe Lüthi-Logo mit einem kleinen Coiffure-Zusatz.
+Der Einstieg «Coiffure in Wohlen.» verwendet grosse, offene Sans-Serif-Typografie
+und ein abstraktes
 Haar-Stillleben als grafischer Einstieg. Die vorhandenen Inspirationsbilder
 werden auf keiner Seite eingesetzt.
 
@@ -46,7 +47,7 @@ ein dynamischer Feed ist ohne offizielle Autorisierung nicht angeschlossen.
 
 ## Bewegung und Bedienung
 
-Der Name fährt beim Einstieg aus einer Textmaske, das Haarmotiv blendet mit einer
+Die Überschrift fährt beim Einstieg aus einer Textmaske, das Haarmotiv blendet mit einer
 Maske ein. Abschnitte und Porträts erscheinen beim Scrollen. Die Originalfotos
 werden nicht vergrössert oder verschoben. Reduzierte Bewegung des Betriebssystems
 und die gespeicherte Animationspause werden berücksichtigt. Ohne JavaScript
