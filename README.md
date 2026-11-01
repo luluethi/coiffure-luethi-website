@@ -1,7 +1,7 @@
 # Coiffure Lüthi — Website-Demo
 
 Vier statische Seiten: Startseite, Leistungen & Preise, Team und Salon.
-Dunkler Auftritt mit gelbem Lüthi-Schriftzug, lokalen Manrope-Schriften und
+Dunkler Auftritt mit gelbem Lüthi-Schriftzug, lokalen Antonio-/Manrope-Schriften und
 Originalfotografien. Kein Framework, keine Paketinstallation und keine
 kostenpflichtigen Laufzeitdienste.
 
@@ -39,11 +39,13 @@ Salon-Website ausserhalb des Repositorys wird nicht verändert.
 
 ## Komposition und Bedienung
 
-Die Startseite verbindet eine grosse Salonansicht mit direkt auswählbaren
-Vorschaubildern und dem Teamfoto. Bilder wechseln per Auswahl, Vor/Zurück,
-Pfeiltasten, Home/End oder horizontaler Touch-Wischgeste. Es gibt keinen Timer,
-Zoom oder Hintergrundversatz. Die Aussenansicht steht zuerst, alle Bilder
-bleiben vollständig und unverzerrt.
+Die Startseite beginnt mit grosser, schmaler Displayschrift und einer einzelnen
+Schwarzweiss-Frisurenaufnahme aus dem bestehenden Bildbestand. Sie ist als
+Frisureninspiration gekennzeichnet. Danach folgen das echte Team in einem hellen
+Abschnitt, vier direkte Wege zu den Preisen und eine grosse Original-Salonansicht.
+Keine Diashow oder Vorschaubild-Leiste; keine Bildvergrösserung beim Scrollen.
+Alle Fotos behalten ihr natürliches Seitenverhältnis. Die Salonseite zeigt auch
+die Aussenansicht und bietet eine separat bedienbare Galerie.
 
 Bewegung wird bei entsprechender Betriebssystemeinstellung reduziert und lässt
 sich im Footer pausieren. Die lokale Präferenz wird gespeichert. Ohne JavaScript
@@ -62,13 +64,14 @@ erklärt. Persönliche Zukunftspläne werden nicht veröffentlicht.
 Das hochgeladene `assets/TeamBild.jpg` bleibt unverändert; optimierte WebP-Kopien
 unter `assets/images/team-vor-dem-salon*.webp` werden responsiv ausgeliefert.
 Alle Salonbilder sind Originalaufnahmen. Allgemeine Modelbilder und KI-Porträts
-werden nicht als eigene Arbeiten gezeigt.
+werden nicht als eigene Arbeiten gezeigt. Das Startseitenmotiv ist ausdrücklich
+als Inspiration beschriftet.
 
 Der aktuelle Instagram-Verweis führt zu https://www.instagram.com/coiffureluethi/.
 Ein dynamischer Feed benötigt die Umstellung des persönlichen Kontos auf
 Business/Creator und eine offizielle Autorisierung; aktuell wird kein Live-Feed
-behauptet. Keine Tracker, externen Fonts oder eingebettete Karte. Manrope ist
-lokal unter SIL Open Font License eingebunden; Lizenz unter `assets/fonts`.
+behauptet. Keine Tracker, externen Fonts oder eingebettete Karte. Manrope und Antonio sind
+lokal unter SIL Open Font License eingebunden; Lizenzen unter `assets/fonts`.
 
 [Logo-Paket](assets/brand/luethi-logo-paket.zip): SVG und transparente PNG-Dateien
 mit 2000 Pixeln Breite. Der Schriftzug wurde aus der vorhandenen Rastervorlage

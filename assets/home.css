@@ -1,111 +1,110 @@
-/* Homepage: one continuous salon tour, followed by a compact offer and contact. */
-.js-nav .home .site-header { position: sticky; background: var(--bg); }
-.salon-entrance { padding-top: 42px; padding-bottom: 42px; }
-.entrance-head { display: flex; align-items: end; justify-content: space-between; gap: 45px; margin-bottom: 34px; }
-.entrance-head h1 { font-size: clamp(46px, 5.05vw, 74px); line-height: 1.08; letter-spacing: -.045em; font-weight: 600; }
-.entrance-head h1 > span { display: inline-block; color: #aeb4a5; font-weight: 400; margin-left: .08em; }
-.entrance-call { display: inline-flex; align-items: center; justify-content: space-between; gap: 25px; font-size: 14px; line-height: 1.5; padding: 12px 17px; min-height: 48px; flex-shrink: 0; border: 1px solid #818a73; }
-.entrance-call:hover { background: var(--accent); color: var(--bg); }
-.entrance-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, .85fr); gap: 32px; align-items: start; }
-.tour-main, .tour-rail { min-width: 0; }
-.tour-stage { position: relative; aspect-ratio: 1600/1066; background: #22251f; overflow: hidden; touch-action: pan-y pinch-zoom; }
-.tour-stage .hero-shot { position: absolute; inset: 0; opacity: 0; transition: opacity .55s ease; }
-.tour-stage .hero-shot.is-active { opacity: 1; }
-.tour-stage .hero-shot img { width: 100%; height: 100%; object-fit: contain; transform: none; }
-.tour-meta { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 15px 8px; }
-.tour-meta #hero-scene-label { font-size: 17px; color: var(--text); margin: 0; font-weight: 600; }
-.tour-pagination { display: none; align-items: center; gap: 13px; }
-.js-nav .tour-pagination { display: flex; }
-.tour-pagination #hero-counter { font-size: 12px; min-width: 49px; }
-.tour-pagination .scene-button { width: 44px; height: 44px; }
-.tour-gallery-link { display: inline-flex; align-items: center; gap: 20px; font-size: 13px; color: var(--muted); padding-block: 5px; min-height: 36px; }
-.tour-gallery-link .icon { width: 15px; height: 15px; }
-.tour-gallery-link:hover { color: var(--text); }
-.tour-choices { display: none; }
-.js-nav .tour-choices { display: grid; }
-.tour-choice { display: grid; grid-template-columns: 72px 1fr 22px; align-items: center; gap: 16px; min-height: 72px; padding: 10px; border: 0; border-bottom: 1px solid #454d3e; color: var(--muted); background: transparent; text-align: left; font-size: 14px; transition: background .25s, color .25s; }
-.tour-choice:first-child { border-top: 1px solid #454d3e; }
-.tour-choice > img { width: 72px; height: auto; aspect-ratio: 1600/1066; object-fit: contain; opacity: .65; transition: opacity .25s; }
-.tour-choice .choice-arrow { display: flex; opacity: 0; transform: translate(-4px, 4px); transition: opacity .25s, transform .25s; }
-.tour-choice .choice-arrow > .icon { width: 19px; height: 19px; }
-.tour-choice:hover, .tour-choice.is-selected { background: #2b3026; color: var(--text); }
-.tour-choice.is-selected > img, .tour-choice:hover > img { opacity: 1; }
-.tour-choice.is-selected .choice-arrow { opacity: 1; transform: none; }
-.team-card { margin-top: 24px; scroll-margin-top: 110px; }
-.team-card .team-photo img { width: 100%; height: auto; object-fit: contain; }
-.team-card-caption { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: 9px; }
-.team-card-caption h2 { font-size: 20px; font-weight: 600; letter-spacing: -.035em; }
-.team-card-caption > .text-link { font-size: 13px; gap: 10px; }
-.team-card > p { font-size: 14px; line-height: 1.7; margin-top: 4px; }
-.offer-section { padding-block: 28px 38px; }
-.offer-panel { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: 70px; background: #eeeee5; color: #171916; padding: 55px 60px; border-radius: 3px; }
-.offer-heading { position: sticky; top: 125px; }
-.offer-heading .eyebrow { color: #54594c; }
-.offer-heading h2 { font-size: clamp(47px, 4.8vw, 68px); line-height: 1.05; letter-spacing: -.06em; }
-.offer-heading h2 > span { color: #747b67; }
-.offer-heading > .text-link { margin-top: 26px; }
-.offer-panel .text-link:hover { color: #4a523d; border-color: #4a523d; }
-.offer-panel .service-row h3 { font-size: clamp(24px, 2.2vw, 32px); }
-.offer-panel .service-row > div > span { font-size: 14px; }
-.offer-panel a:focus-visible { outline-color: #171916; }
-.social-strip { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 10px 38px; }
-.social-strip > span { font-size: 14px; color: var(--muted); }
-.social-strip .text-link { font-size: 14px; }
+/* Hair editorial, then the people and place. No carousel, previews or dashboard UI. */
+.fashion-hero { padding-block: 28px 0; }
+.hero-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: relative; }
+.hero-copy { position: relative; z-index: 2; padding-block: 35px; }
+.hero-kicker { margin-bottom: 35px; color: var(--muted); }
+.hero-copy h1 { font-size: clamp(110px, 13vw, 190px); line-height: 1.05; letter-spacing: -.035em; overflow: visible; }
+.type-line { display: block; width: calc(100% + 140px); overflow: hidden; }
+.type-line > span { display: block; }
+.hero-location { display: block; font: 400 clamp(35px, 3.8vw, 56px)/1.2 var(--body); text-transform: none; letter-spacing: -.055em; margin-top: 15px; }
+.hero-description { font-size: 17px; max-width: 360px; margin-top: 32px; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin-top: 34px; }
+.hero-visual { position: relative; margin-left: -35px; }
+.hero-visual > img { width: 100%; height: auto; }
+.hero-visual > figcaption { position: absolute; right: 15px; bottom: 15px; padding: 4px 9px; margin: 0; background: #171717ce; color: var(--text); font-size: 11px; }
+.hero-foot { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-block: 30px 38px; font-size: 12px; color: var(--muted); }
+.hero-foot > a { display: flex; align-items: center; gap: 25px; min-height: 44px; color: var(--text); }
+.hero-foot > a > span { font-size: 25px; }
+.home-people { background: var(--paper); color: var(--ink); padding-block: 95px; }
+.people-layout { display: grid; grid-template-columns: 1.2fr .8fr; gap: 80px; align-items: center; }
+.people-photo > img { width: 100%; height: auto; }
+.people-photo figcaption { color: #5f5a52; font-size: 13px; }
+.people-copy .eyebrow { color: #5f5a52; }
+.people-copy h2 { font-size: clamp(65px, 7.2vw, 106px); }
+.people-copy p { color: #5f5a52; margin-top: 25px; max-width: 330px; }
+.people-copy .text-link { margin-top: 25px; border-color: #8d867b; }
+.home-people a:focus-visible { outline-color: var(--ink); }
+.home-offer { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; padding-block: 100px; }
+.offer-intro { position: sticky; top: 125px; align-self: start; }
+.offer-intro .eyebrow { color: var(--muted); }
+.offer-intro h2 { font-size: clamp(64px, 6.2vw, 92px); line-height: 1.12; }
+.offer-intro > .text-link { margin-top: 25px; }
+.service-list { border-top: 1px solid #98948a; }
+.service-row { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 29px; border-bottom: 1px solid var(--line); }
+.service-row h3 { font-size: 30px; }
+.service-row p { font-size: 15px; margin-top: 9px; }
+.service-row > div { transition: transform .3s; }
+.service-row > .icon { width: 30px; height: 30px; transition: transform .3s; }
+.service-row:hover > div { transform: translateX(9px); }
+.service-row:hover > .icon { transform: translate(4px, -4px); }
+.home-salon { padding-bottom: 60px; }
+.salon-heading { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 40px; }
+.salon-heading .eyebrow { color: var(--muted); margin-bottom: 20px; }
+.salon-heading h2 { font-size: clamp(65px, 7.2vw, 105px); }
+.salon-photo > img { width: 100%; height: auto; }
+.salon-photo figcaption { font-size: 13px; }
+.salon-social { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-block: 24px 0; }
+.salon-social > span { color: var(--muted); font-size: 14px; }
+.js-motion .type-line > span { animation: type-in 1s cubic-bezier(.16,1,.3,1) both; }
+.js-motion .hero-location { animation: content-in 1s .12s both; }
+.js-motion .hero-visual { animation: portrait-in 1.25s cubic-bezier(.2,.7,.3,1) both; }
+@keyframes type-in { from { transform: translateY(112%); } to { transform: none; } }
+@keyframes portrait-in { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
 @media (max-width: 1100px) {
-  .salon-entrance { padding-top: 32px; }
-  .entrance-head { margin-bottom: 28px; }
-  .entrance-head h1 { font-size: clamp(42px, 5.5vw, 60px); }
-  .entrance-call { display: none; }
-  .entrance-grid { grid-template-columns: minmax(0, 1.55fr) minmax(0, .9fr); gap: 24px; }
-  .tour-choice { grid-template-columns: 55px 1fr; gap: 12px; padding: 8px; min-height: 60px; font-size: 13px; }
-  .tour-choice > img { width: 55px; }
-  .tour-choice .choice-arrow { display: none; }
-  .team-card-caption { display: block; margin-top: 14px; }
-  .team-card-caption > .text-link { margin-top: 3px; }
-  .team-card > p { font-size: 13px; }
-  .offer-panel { padding: 40px 35px; gap: 45px; }
+  .hero-copy h1 { font-size: clamp(105px, 13.2vw, 145px); }
+  .hero-location { font-size: clamp(32px, 3.9vw, 44px); }
+  .hero-actions { gap: 16px; }
+  .hero-actions .button { gap: 20px; }
+  .hero-actions .text-link { font-size: 13px; gap: 13px; }
+  .hero-visual { margin-left: -20px; }
+  .people-layout { gap: 45px; }
+  .home-offer { gap: 60px; }
 }
 @media (max-width: 760px) {
-  .salon-entrance { padding-block: 25px 24px; }
-  .entrance-head { display: block; margin-bottom: 23px; }
-  .entrance-head h1 { font-size: clamp(35px, 9.3vw, 52px); line-height: 1.12; }
-  .entrance-head h1 > span { display: block; margin-left: 0; }
-  .entrance-grid { grid-template-columns: 1fr; gap: 15px; }
-  .tour-meta { gap: 15px; padding-block: 10px 0; }
-  .tour-meta #hero-scene-label { font-size: 16px; }
-  .tour-pagination { gap: 8px; }
-  .tour-pagination #hero-counter { min-width: 43px; font-size: 11px; }
-  .tour-gallery-link { font-size: 12px; min-height: 33px; }
-  .js-nav .tour-choices { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
-  .tour-choice { display: flex; flex-direction: column; justify-content: start; gap: 7px; padding: 0 0 8px; border-top: 0; font-size: 11px; min-height: 69px; }
-  .tour-choice:first-child { border-top: 0; }
-  .tour-choice > img { width: 100%; }
-  .tour-choice > span:not(.choice-arrow) { padding-inline: 3px; white-space: nowrap; }
-  .team-card { margin-top: 24px; }
-  .team-card-caption { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
-  .team-card-caption h2 { font-size: 20px; }
-  .team-card-caption .text-link { margin-top: 0; font-size: 13px; }
-  .team-card > p { font-size: 14px; }
-  .offer-section { padding-block: 14px 16px; }
-  .offer-panel { display: block; padding: 30px 24px; }
-  .offer-heading { position: static; margin-bottom: 28px; }
-  .offer-heading h2 { font-size: 47px; }
-  .offer-heading > .text-link { margin-top: 22px; }
-  .offer-panel .service-row { padding-block: 22px; }
-  .offer-panel .service-row h3 { font-size: 25px; }
-  .offer-panel .service-row > div > span { font-size: 14px; }
-  .social-strip { display: block; padding-block: 15px 28px; }
-  .social-strip > span { display: block; font-size: 13px; }
-  .social-strip .text-link { margin-top: 6px; font-size: 14px; gap: 15px; }
+  .fashion-hero { padding-top: 25px; }
+  .hero-layout { display: grid; grid-template-columns: 1fr; }
+  .hero-copy { display: contents; }
+  .hero-kicker { order: 0; margin-bottom: 18px; font-size: 10px; }
+  .hero-copy h1 { order: 1; font-size: clamp(100px, 25.5vw, 155px); z-index: 2; position: relative; }
+  .type-line { width: 100%; }
+  .hero-location { margin-top: 10px; font-size: 34px; }
+  .hero-visual { order: 2; width: 85%; margin-left: auto; margin-top: 25px; }
+  .hero-visual > figcaption { right: 10px; bottom: 10px; font-size: 10px; }
+  .hero-description { order: 3; margin-top: 25px; font-size: 17px; }
+  .hero-actions { order: 4; margin-top: 25px; gap: 22px; }
+  .hero-actions .button { gap: 20px; font-size: 13px; }
+  .hero-foot { padding-block: 24px 30px; font-size: 11px; }
+  .hero-foot > span { display: none; }
+  .home-people { padding-block: 55px; }
+  .people-layout { grid-template-columns: 1fr; gap: 32px; }
+  .people-copy h2 { font-size: 70px; }
+  .people-copy h2 br { display: none; }
+  .people-copy p { margin-top: 22px; max-width: 420px; }
+  .people-copy .text-link { margin-top: 20px; }
+  .home-offer { grid-template-columns: 1fr; gap: 35px; padding-block: 60px; }
+  .offer-intro { position: static; }
+  .offer-intro h2 { font-size: 72px; }
+  .offer-intro > .text-link { margin-top: 22px; }
+  .service-row { padding-block: 23px; }
+  .service-row h3 { font-size: 27px; }
+  .service-row p { font-size: 15px; }
+  .service-row > .icon { width: 26px; height: 26px; }
+  .home-salon { padding-bottom: 45px; }
+  .salon-heading { display: block; margin-bottom: 28px; }
+  .salon-heading h2 { font-size: 72px; }
+  .salon-heading > .text-link { margin-top: 20px; }
+  .salon-social { display: block; padding-top: 20px; padding-bottom: 0; }
+  .salon-social > span { display: block; font-size: 13px; }
+  .salon-social .text-link { margin-top: 8px; font-size: 14px; }
 }
 @media (max-width: 360px) {
-  .entrance-head h1 { font-size: 33px; }
-  .tour-choice { font-size: 10px; }
-  .offer-panel { padding-inline: 20px; }
-  .offer-heading h2 { font-size: 42px; }
-  .offer-panel .service-row h3 { font-size: 23px; }
-  .social-strip .text-link { font-size: 13px; }
+  .hero-copy h1 { font-size: 91px; }
+  .hero-location { font-size: 31px; }
+  .hero-actions { gap: 16px; }
+  .hero-actions .button { padding-inline: 16px; gap: 15px; }
+  .hero-actions .text-link { font-size: 12px; gap: 12px; }
+  .people-copy h2 { font-size: 64px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .salon-entrance *, .offer-panel *, .social-strip * { transition: none !important; animation: none !important; }
+  .fashion-hero *, .home-people *, .home-offer *, .home-salon * { animation: none !important; transition: none !important; }
 }

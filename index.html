@@ -7,7 +7,7 @@
 <meta name="description" content="Coiffure Lüthi: Ihr Familiencoiffeur in Wohlen seit 1987. Entdecken Sie den Salon, das Team und unser Angebot. Termine: 056 622 60 40.">
 <title>Startseite | Coiffure Lüthi · Seit 1987 in Wohlen</title>
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/antonio-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/home.css">
 <script src="/assets/site.js" defer>
@@ -21,7 +21,7 @@
 <img src="/assets/luethi.svg" alt="Lüthi" width="140" height="58">
 </a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navigation">
-<span>Menü</span>
+<span class="menu-label">Menü</span>
 <span class="menu-lines" aria-hidden="true">
 </span>
 </button>
@@ -29,7 +29,7 @@
 <a href="/" aria-current="page">Startseite</a>
 <a href="/preise/">Leistungen & Preise</a>
 <a href="/team/">Team</a>
-<a href="/salon/">Salon & Galerie</a>
+<a href="/salon/">Salon</a>
 <a class="nav-cta" href="tel:+41566226040">
 <span>Ihr Termin</span>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -40,124 +40,68 @@
 </div>
 </header>
 <main id="inhalt" tabindex="-1">
-<section class="salon-entrance wrap" aria-labelledby="entrance-title">
-<div class="entrance-head">
-<div>
-<h1 class="title-reveal" id="entrance-title">Ihr Coiffeur <span>in Wohlen.</span>
+<section class="fashion-hero wrap">
+<div class="hero-layout">
+<div class="hero-copy">
+<span class="eyebrow hero-kicker">Familienbetrieb seit 1987</span>
+<h1>
+<span class="type-line">
+<span>Coiffure</span>
+</span>
+<span class="hero-location">in Wohlen.</span>
 </h1>
-</div>
-<a class="entrance-call" href="tel:+41566226040">
+<p class="hero-description">Haarschnitte und Farbe.<br>Für Damen, Herren und Kinder.</p>
+<div class="hero-actions">
+<a class="button" href="tel:+41566226040">
 <span>Termin vereinbaren</span>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
 </svg>
 </a>
-</div>
-<div class="entrance-grid">
-<div class="tour-main">
-<div class="tour-stage" role="group" aria-label="Salonbilder">
-<div class="hero-shot is-active" data-scene="Von aussen" aria-hidden="false">
-<img src="/assets/images/copyright-fototoni-02.webp" alt="Aussenansicht des Salons Coiffure Lüthi in Wohlen" width="1600" height="1066" fetchpriority="high">
-</div>
-<div class="hero-shot" data-scene="Am Fenster" aria-hidden="true">
-<img src="/assets/images/copyright-fototoni-15.webp" alt="Die Bedienplätze an den grossen Fenstern" width="1600" height="1066" loading="lazy">
-</div>
-<div class="hero-shot" data-scene="Im Salon" aria-hidden="true">
-<img src="/assets/images/copyright-fototoni-11.webp" alt="Blick durch die Räume von Coiffure Lüthi" width="1600" height="1066" loading="lazy">
-</div>
-<div class="hero-shot" data-scene="Am Empfang" aria-hidden="true">
-<img src="/assets/images/copyright-fototoni-37.webp" alt="Der Empfang im Salon Coiffure Lüthi" width="1600" height="1066" loading="lazy">
-</div>
-</div>
-<div class="tour-meta">
-<span id="hero-scene-label">Von aussen</span>
-<div class="tour-pagination">
-<button class="scene-button prev" data-hero-prev type="button" aria-label="Vorheriges Salonbild">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-<path d="M4 12h16m-6-6 6 6-6 6"/>
-</svg>
-</button>
-<span id="hero-counter" aria-live="polite">01 / 04</span>
-<button class="scene-button" data-hero-next type="button" aria-label="Nächstes Salonbild">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-<path d="M4 12h16m-6-6 6 6-6 6"/>
-</svg>
-</button>
-</div>
-</div>
-<a class="tour-gallery-link" href="/salon/">
-<span>Alle Salonbilder</span>
+<a class="text-link" href="/preise/">
+<span>Leistungen & Preise</span>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
 </svg>
 </a>
 </div>
-<aside class="tour-rail" aria-label="Salonauswahl und Team">
-<div class="tour-choices" role="group" aria-label="Salonansicht auswählen">
-<button class="tour-choice is-selected" type="button" data-hero-select="0" aria-pressed="true" aria-label="Salonansicht 1: Von aussen">
-<img src="/assets/images/copyright-fototoni-02.webp" alt="" width="1600" height="1066" loading="lazy">
-<span>Von aussen</span>
-<span class="choice-arrow" aria-hidden="true">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-<path d="M5 19 19 5M5 5h14v14"/>
-</svg>
-</span>
-</button>
-<button class="tour-choice" type="button" data-hero-select="1" aria-pressed="false" aria-label="Salonansicht 2: Am Fenster">
-<img src="/assets/images/copyright-fototoni-15.webp" alt="" width="1600" height="1066" loading="lazy">
-<span>Am Fenster</span>
-<span class="choice-arrow" aria-hidden="true">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-<path d="M5 19 19 5M5 5h14v14"/>
-</svg>
-</span>
-</button>
-<button class="tour-choice" type="button" data-hero-select="2" aria-pressed="false" aria-label="Salonansicht 3: Im Salon">
-<img src="/assets/images/copyright-fototoni-11.webp" alt="" width="1600" height="1066" loading="lazy">
-<span>Im Salon</span>
-<span class="choice-arrow" aria-hidden="true">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-<path d="M5 19 19 5M5 5h14v14"/>
-</svg>
-</span>
-</button>
-<button class="tour-choice" type="button" data-hero-select="3" aria-pressed="false" aria-label="Salonansicht 4: Am Empfang">
-<img src="/assets/images/copyright-fototoni-37.webp" alt="" width="1600" height="1066" loading="lazy">
-<span>Am Empfang</span>
-<span class="choice-arrow" aria-hidden="true">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-<path d="M5 19 19 5M5 5h14v14"/>
-</svg>
-</span>
-</button>
 </div>
-<div class="team-card" id="team">
-<div class="image-trigger">
-<figure class="team-photo image-reveal">
-<img src="/assets/images/team-vor-dem-salon.webp" srcset="/assets/images/team-vor-dem-salon-small.webp 800w, /assets/images/team-vor-dem-salon.webp 1800w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 32vw, 430px" alt="Das fünfköpfige Team von Coiffure Lüthi gemeinsam vor dem Salon" width="1800" height="1162" loading="lazy">
+<figure class="hero-visual">
+<img src="/assets/images/180516_LabelM_Shot09_107_v4x.webp" alt="Frisureninspiration aus der vorhandenen Bildsammlung: kurzer, strukturierter Haarschnitt" width="904" height="966" fetchpriority="high">
+<figcaption>Frisureninspiration</figcaption>
 </figure>
 </div>
-<div class="team-card-caption">
-<h2>Unser Team</h2>
+<div class="hero-foot">
+<a href="#team">Das Team kennenlernen <span aria-hidden="true">↓</span>
+</a>
+<span>Coiffure Lüthi · Zentralstrasse 34b</span>
+</div>
+</section>
+<section class="home-people" id="team">
+<div class="wrap people-layout">
+<div class="image-trigger">
+<figure class="people-photo image-reveal">
+<img src="/assets/images/team-vor-dem-salon.webp" srcset="/assets/images/team-vor-dem-salon-small.webp 800w, /assets/images/team-vor-dem-salon.webp 1800w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 60vw, 850px" alt="Das fünfköpfige Team von Coiffure Lüthi gemeinsam vor dem Salon" width="1800" height="1162" loading="lazy">
+<figcaption>Unser Team vor dem Salon.</figcaption>
+</figure>
+</div>
+<div class="people-copy reveal">
+<span class="eyebrow">Coiffure Lüthi</span>
+<h2>Unser <br>Team.</h2>
+<p>Dieter, Doris, Alexandra, Leonie und Pat.</p>
 <a class="text-link" href="/team/">
-<span>Kennenlernen</span>
+<span>Lernen Sie uns kennen</span>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
 </svg>
 </a>
 </div>
-<p>Dieter, Doris, Alexandra, Leonie und Pat.<br>Familienbetrieb seit 1987.</p>
-</div>
-</aside>
 </div>
 </section>
-<section class="offer-section" id="leistungen">
-<div class="wrap offer-panel">
-<div class="offer-heading reveal">
+<section class="home-offer wrap" id="leistungen">
+<div class="offer-intro reveal">
 <span class="eyebrow">Unser Angebot</span>
-<h2>Schnitt.<br>Farbe.<br>
-<span>Styling.</span>
-</h2>
+<h2>Schnitt.<br>Farbe.<br>Styling.</h2>
 <a class="text-link" href="/preise/">
 <span>Alle Leistungen & Preise</span>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -169,7 +113,7 @@
 <a class="service-row reveal" href="/preise/#damen">
 <div>
 <h3>Damen</h3>
-<span>Haarschnitt und Styling</span>
+<p>Haarschnitt und Styling</p>
 </div>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
@@ -178,7 +122,7 @@
 <a class="service-row reveal" href="/preise/#herren">
 <div>
 <h3>Herren</h3>
-<span>Haarschnitt und Styling</span>
+<p>Haarschnitt und Styling</p>
 </div>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
@@ -187,7 +131,7 @@
 <a class="service-row reveal" href="/preise/#haarfarben">
 <div>
 <h3>Farbe & Mèches</h3>
-<span>Tönung, Farbe und Mèches</span>
+<p>Tönung, Farbe und Mèches</p>
 </div>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
@@ -196,16 +140,34 @@
 <a class="service-row reveal" href="/preise/#kinder">
 <div>
 <h3>Kinder</h3>
-<span>Für die kleinen Kundinnen und Kunden</span>
+<p>Haarschnitte für die Kleinen</p>
 </div>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
 </svg>
 </a>
 </div>
-</div>
 </section>
-<aside class="social-strip wrap" aria-label="Aktuelles auf Instagram">
+<section class="home-salon wrap">
+<div class="salon-heading reveal">
+<div>
+<span class="eyebrow">Zentralstrasse 34b</span>
+<h2>Der Salon.</h2>
+</div>
+<a class="text-link" href="/salon/">
+<span>Räume & Galerie</span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+<path d="M5 19 19 5M5 5h14v14"/>
+</svg>
+</a>
+</div>
+<div class="image-trigger">
+<figure class="salon-photo image-reveal">
+<img src="/assets/images/copyright-fototoni-15.webp" alt="Die Bedienplätze am Fenster im Salon Coiffure Lüthi" width="1600" height="1066" loading="lazy">
+<figcaption>Einblick in unseren Salon in Wohlen.</figcaption>
+</figure>
+</div>
+<div class="salon-social">
 <span>Aktuelles aus dem Salon</span>
 <a class="text-link" href="https://www.instagram.com/coiffureluethi/" target="_blank" rel="noopener noreferrer">
 <span>Instagram · @coiffureluethi</span>
@@ -213,23 +175,24 @@
 <path d="M5 19 19 5M5 5h14v14"/>
 </svg>
 </a>
-</aside>
+</div>
+</section>
 </main>
 <section class="booking" id="kontakt">
 <div class="wrap">
-<div class="booking-head reveal">
+<div class="booking-top">
 <div>
-<span class="eyebrow">Kontakt</span>
-<h2>Ihr Termin.</h2>
+<span class="eyebrow">Telefonische Terminvereinbarung</span>
+<h2>Ihr nächster<br>Termin.</h2>
 </div>
-<a class="contact-phone" href="tel:+41566226040" aria-label="Coiffure Lüthi anrufen: 056 622 60 40">
+<a class="booking-phone" href="tel:+41566226040" aria-label="Coiffure Lüthi anrufen: 056 622 60 40">
 <span>056 622 60 40</span>
 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
 <path d="M5 19 19 5M5 5h14v14"/>
 </svg>
 </a>
 </div>
-<div class="booking-details">
+<div class="booking-info">
 <address>Coiffure Lüthi<br>Zentralstrasse 34b<br>5610 Wohlen</address>
 <a class="text-link" href="mailto:info@coiffure-luethi.ch">
 <span>info@coiffure-luethi.ch</span>
