@@ -1,110 +1,139 @@
-/* Hair editorial, then the people and place. No carousel, previews or dashboard UI. */
-.fashion-hero { padding-block: 28px 0; }
-.hero-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: relative; }
-.hero-copy { position: relative; z-index: 2; padding-block: 35px; }
-.hero-kicker { margin-bottom: 35px; color: var(--muted); }
-.hero-copy h1 { font-size: clamp(110px, 13vw, 190px); line-height: 1.05; letter-spacing: -.035em; overflow: visible; }
-.type-line { display: block; width: calc(100% + 140px); overflow: hidden; }
-.type-line > span { display: block; }
-.hero-location { display: block; font: 400 clamp(35px, 3.8vw, 56px)/1.2 var(--body); text-transform: none; letter-spacing: -.055em; margin-top: 15px; }
-.hero-description { font-size: 17px; max-width: 360px; margin-top: 32px; }
-.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin-top: 34px; }
-.hero-visual { position: relative; margin-left: -35px; }
-.hero-visual > img { width: 100%; height: auto; }
-.hero-visual > figcaption { position: absolute; right: 15px; bottom: 15px; padding: 4px 9px; margin: 0; background: #171717ce; color: var(--text); font-size: 11px; }
-.hero-foot { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-block: 30px 38px; font-size: 12px; color: var(--muted); }
-.hero-foot > a { display: flex; align-items: center; gap: 25px; min-height: 44px; color: var(--text); }
-.hero-foot > a > span { font-size: 25px; }
-.home-people { background: var(--paper); color: var(--ink); padding-block: 95px; }
-.people-layout { display: grid; grid-template-columns: 1.2fr .8fr; gap: 80px; align-items: center; }
-.people-photo > img { width: 100%; height: auto; }
-.people-photo figcaption { color: #5f5a52; font-size: 13px; }
-.people-copy .eyebrow { color: #5f5a52; }
-.people-copy h2 { font-size: clamp(65px, 7.2vw, 106px); }
-.people-copy p { color: #5f5a52; margin-top: 25px; max-width: 330px; }
-.people-copy .text-link { margin-top: 25px; border-color: #8d867b; }
-.home-people a:focus-visible { outline-color: var(--ink); }
-.home-offer { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; padding-block: 100px; }
-.offer-intro { position: sticky; top: 125px; align-self: start; }
-.offer-intro .eyebrow { color: var(--muted); }
-.offer-intro h2 { font-size: clamp(64px, 6.2vw, 92px); line-height: 1.12; }
-.offer-intro > .text-link { margin-top: 25px; }
-.service-list { border-top: 1px solid #98948a; }
-.service-row { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 29px; border-bottom: 1px solid var(--line); }
-.service-row h3 { font-size: 30px; }
-.service-row p { font-size: 15px; margin-top: 9px; }
-.service-row > div { transition: transform .3s; }
-.service-row > .icon { width: 30px; height: 30px; transition: transform .3s; }
-.service-row:hover > div { transform: translateX(9px); }
-.service-row:hover > .icon { transform: translate(4px, -4px); }
-.home-salon { padding-bottom: 60px; }
-.salon-heading { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 40px; }
-.salon-heading .eyebrow { color: var(--muted); margin-bottom: 20px; }
-.salon-heading h2 { font-size: clamp(65px, 7.2vw, 105px); }
-.salon-photo > img { width: 100%; height: auto; }
-.salon-photo figcaption { font-size: 13px; }
-.salon-social { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-block: 24px 0; }
-.salon-social > span { color: var(--muted); font-size: 14px; }
-.js-motion .type-line > span { animation: type-in 1s cubic-bezier(.16,1,.3,1) both; }
-.js-motion .hero-location { animation: content-in 1s .12s both; }
-.js-motion .hero-visual { animation: portrait-in 1.25s cubic-bezier(.2,.7,.3,1) both; }
-@keyframes type-in { from { transform: translateY(112%); } to { transform: none; } }
-@keyframes portrait-in { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+/* A typographic brand, tactile hair art, then the real people and place. */
+.brand-hero { padding-top: 34px; }
+.hero-top { display: grid; grid-template-columns: 1.7fr 1fr; align-items: end; gap: 35px; margin-bottom: 30px; }
+.hero-category { display: block; font-size: 15px; letter-spacing: -.015em; margin-bottom: 20px; }
+.hero-name { display: block; overflow: hidden; padding-block: 8px 22px; margin-bottom: -22px; }
+.hero-name > span { display: block; font-size: clamp(150px, 22.5vw, 325px); font-weight: 600; letter-spacing: -.09em; line-height: .95; margin-left: -.045em; }
+.hero-intro { justify-self: end; padding-bottom: 5px; }
+.hero-intro p { font-size: 16px; line-height: 1.7; margin-bottom: 28px; }
+.hero-art { position: relative; aspect-ratio: 2.75; border-radius: 160px 20px 20px 20px; overflow: hidden; background: #b8aeb8; }
+.hero-art picture { display: block; height: 100%; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 51%; }
+.round-link { position: absolute; right: 35px; bottom: 30px; width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: var(--surface); border-radius: 50%; text-align: center; color: var(--ink); font-size: 11px; line-height: 1.5; transition: background .3s, border-radius .3s; }
+.round-link > span:last-child { font-size: 27px; transition: transform .3s; }
+.round-link:hover { border-radius: 35%; background: var(--paper); }
+.round-link:hover > span:last-child { transform: translateY(5px); }
+.hero-baseline { display: flex; justify-content: space-between; align-items: center; gap: 25px; padding-block: 18px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.hero-baseline > a { display: flex; align-items: center; gap: 30px; min-height: 44px; }
+.hero-baseline .icon { width: 17px; height: 17px; }
+.people-section { padding-block: 95px 65px; }
+.section-heading > .eyebrow { margin-bottom: 30px; }
+.section-heading > div { display: flex; justify-content: space-between; align-items: end; gap: 50px; }
+.section-heading .text-link { margin-bottom: 6px; }
+.section-heading h2 { font-size: clamp(44px, 5vw, 72px); }
+.portrait-deck { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 22px; padding-block: 55px 0; }
+.portrait-card { display: block; min-width: 0; }
+.portrait-card:nth-child(even) { margin-top: 60px; }
+.portrait-photo { overflow: hidden; border-radius: 8px; background: var(--surface); }
+.portrait-photo img { width: 100%; height: auto; }
+.portrait-caption { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 15px; }
+.portrait-caption h3 { font-size: 20px; }
+.portrait-caption > .icon { transition: transform .3s; }
+.portrait-card:hover .portrait-caption > .icon { transform: rotate(45deg); }
+.portrait-tools { display: none; }
+.offer-section { background: var(--ink); color: var(--paper); padding-block: 80px; border-radius: 48px 48px 0 0; }
+.offer-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
+.offer-intro { position: sticky; top: 130px; align-self: start; }
+.offer-intro .eyebrow { margin-bottom: 40px; color: #c5b9cb; }
+.offer-intro h2 { font-size: clamp(60px, 7vw, 100px); }
+.offer-intro > .text-link { margin-top: 35px; }
+.service-list { border-top: 1px solid #7d6d85; }
+.service-row { display: flex; align-items: center; gap: 25px; border-bottom: 1px solid #66566d; padding-block: 32px; }
+.service-number { align-self: start; padding-top: 6px; font-size: 11px; color: #c5b9cb; }
+.service-row h3 { font-size: 36px; }
+.service-row p { color: #c5b9cb; font-size: 14px; margin-top: 10px; }
+.service-row > .icon { margin-left: auto; width: 49px; height: 49px; border: 1px solid #8c7d93; padding: 13px; border-radius: 50%; transition: background .3s, color .3s, transform .3s; }
+.service-row:hover > .icon { transform: rotate(45deg); background: var(--surface); color: var(--ink); }
+.place-section { padding-block: 95px 65px; }
+.place-section .section-heading p { font-size: 16px; margin-bottom: 6px; }
+.place-layout { display: grid; grid-template-columns: 1.3fr .7fr; gap: 55px; align-items: start; margin-top: 50px; }
+.place-outside img, .place-inside img { width: 100%; height: auto; border-radius: 8px; }
+.place-side { margin-top: 110px; }
+.place-side .button { margin-top: 30px; }
+.instagram-line { display: flex; justify-content: space-between; gap: 30px; align-items: center; border-top: 1px solid var(--line); padding-top: 25px; margin-top: 50px; font-size: 14px; }
+.instagram-line > span { color: var(--muted); }
+.instagram-line > a { display: inline-flex; gap: 30px; align-items: center; min-height: 44px; }
+.js-motion .hero-name > span { animation: brand-in 1.05s cubic-bezier(.16,1,.3,1) both; }
+.js-motion .hero-intro { animation: content-in 1s .15s both; }
+.js-motion .hero-art { animation: art-in 1.2s cubic-bezier(.2,.7,.3,1) both; }
+@keyframes brand-in { from { transform: translateY(120%); } to { transform: none; } }
+@keyframes art-in { from { opacity: 0; clip-path: inset(0 0 100% 0 round 160px 20px 20px 20px); } to { opacity: 1; clip-path: inset(0 round 160px 20px 20px 20px); } }
 @media (max-width: 1100px) {
-  .hero-copy h1 { font-size: clamp(105px, 13.2vw, 145px); }
-  .hero-location { font-size: clamp(32px, 3.9vw, 44px); }
-  .hero-actions { gap: 16px; }
-  .hero-actions .button { gap: 20px; }
-  .hero-actions .text-link { font-size: 13px; gap: 13px; }
-  .hero-visual { margin-left: -20px; }
-  .people-layout { gap: 45px; }
-  .home-offer { gap: 60px; }
+ .hero-top { grid-template-columns: 1.4fr 1fr; }
+ .hero-name > span { font-size: 23vw; }
+ .hero-intro p { font-size: 14px; }
+ .hero-intro .button { font-size: 12px; gap: 24px; padding-inline: 20px; }
+ .hero-art { aspect-ratio: 2.35; }
+ .portrait-deck { gap: 16px; }
+ .portrait-caption h3 { font-size: 17px; }
+ .offer-layout { gap: 55px; }
+ .service-row { gap: 18px; }
+ .service-row h3 { font-size: 29px; }
+ .place-layout { gap: 35px; }
+ .place-side { margin-top: 70px; }
 }
 @media (max-width: 760px) {
-  .fashion-hero { padding-top: 25px; }
-  .hero-layout { display: grid; grid-template-columns: 1fr; }
-  .hero-copy { display: contents; }
-  .hero-kicker { order: 0; margin-bottom: 18px; font-size: 10px; }
-  .hero-copy h1 { order: 1; font-size: clamp(100px, 25.5vw, 155px); z-index: 2; position: relative; }
-  .type-line { width: 100%; }
-  .hero-location { margin-top: 10px; font-size: 34px; }
-  .hero-visual { order: 2; width: 85%; margin-left: auto; margin-top: 25px; }
-  .hero-visual > figcaption { right: 10px; bottom: 10px; font-size: 10px; }
-  .hero-description { order: 3; margin-top: 25px; font-size: 17px; }
-  .hero-actions { order: 4; margin-top: 25px; gap: 22px; }
-  .hero-actions .button { gap: 20px; font-size: 13px; }
-  .hero-foot { padding-block: 24px 30px; font-size: 11px; }
-  .hero-foot > span { display: none; }
-  .home-people { padding-block: 55px; }
-  .people-layout { grid-template-columns: 1fr; gap: 32px; }
-  .people-copy h2 { font-size: 70px; }
-  .people-copy h2 br { display: none; }
-  .people-copy p { margin-top: 22px; max-width: 420px; }
-  .people-copy .text-link { margin-top: 20px; }
-  .home-offer { grid-template-columns: 1fr; gap: 35px; padding-block: 60px; }
-  .offer-intro { position: static; }
-  .offer-intro h2 { font-size: 72px; }
-  .offer-intro > .text-link { margin-top: 22px; }
-  .service-row { padding-block: 23px; }
-  .service-row h3 { font-size: 27px; }
-  .service-row p { font-size: 15px; }
-  .service-row > .icon { width: 26px; height: 26px; }
-  .home-salon { padding-bottom: 45px; }
-  .salon-heading { display: block; margin-bottom: 28px; }
-  .salon-heading h2 { font-size: 72px; }
-  .salon-heading > .text-link { margin-top: 20px; }
-  .salon-social { display: block; padding-top: 20px; padding-bottom: 0; }
-  .salon-social > span { display: block; font-size: 13px; }
-  .salon-social .text-link { margin-top: 8px; font-size: 14px; }
+ .brand-hero { padding-top: 35px; }
+ .hero-top { grid-template-columns: 1fr; gap: 22px; margin-bottom: 30px; }
+ .hero-category { font-size: 13px; margin-bottom: 15px; }
+ .hero-name { padding-block: 5px 15px; margin-bottom: -15px; }
+ .hero-name > span { font-size: 34.5vw; }
+ .hero-intro { justify-self: stretch; padding: 0; }
+ .hero-intro p { font-size: 15px; margin: 0; }
+ .hero-intro .button { font-size: 13px; padding: 13px 20px; gap: 30px; min-height: 50px; margin-top: 20px; }
+ .hero-intro .icon { width: 17px; height: 17px; }
+ .hero-art { aspect-ratio: 1.18; border-radius: 85px 12px 12px 12px; }
+ .hero-art img { object-position: 64% 50%; }
+ .round-link { width: 87px; height: 87px; right: 15px; bottom: 15px; font-size: 9px; gap: 2px; }
+ .round-link > span:last-child { font-size: 22px; }
+ .hero-baseline { font-size: 10px; gap: 15px; padding-block: 12px; }
+ .hero-baseline > a { gap: 12px; }
+ .hero-baseline .icon { width: 15px; height: 15px; }
+ .people-section { padding-block: 55px 45px; overflow: hidden; }
+ .section-heading > .eyebrow { font-size: 10px; margin-bottom: 22px; }
+ .section-heading > div { display: block; }
+ .section-heading h2 { font-size: clamp(36px, 9.6vw, 62px); }
+ .section-heading .text-link { margin-top: 20px; margin-bottom: 0; }
+ .portrait-deck { display: flex; gap: 16px; width: calc(100% + 40px); margin-inline: -20px; padding: 35px 20px 20px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; }
+ .portrait-deck::-webkit-scrollbar { display: none; }
+ .portrait-card { flex: 0 0 77%; scroll-snap-align: start; }
+ .portrait-card:nth-child(even) { margin-top: 0; }
+ .portrait-caption h3 { font-size: 25px; }
+ .portrait-caption { padding-top: 16px; }
+ .portrait-tools { display: flex; justify-content: space-between; align-items: center; gap: 15px; font-size: 11px; margin-top: 5px; }
+ .portrait-tools > div { display: none; gap: 8px; }
+ .js-nav .portrait-tools > div { display: flex; }
+ .portrait-tools button { border: 1px solid var(--ink); width: 44px; height: 44px; padding: 0; background: transparent; color: var(--ink); border-radius: 50%; font-size: 20px; }
+ .portrait-tools button:disabled { opacity: .3; cursor: default; }
+ .portrait-hint { margin-left: auto; margin-right: 10px; color: var(--muted); }
+ .offer-section { padding-block: 50px; border-radius: 28px 28px 0 0; }
+ .offer-layout { grid-template-columns: 1fr; gap: 40px; }
+ .offer-intro { position: static; }
+ .offer-intro .eyebrow { margin-bottom: 25px; font-size: 10px; }
+ .offer-intro h2 { font-size: 70px; }
+ .offer-intro > .text-link { margin-top: 25px; }
+ .service-row { padding-block: 25px; gap: 18px; }
+ .service-row h3 { font-size: 28px; }
+ .service-row p { font-size: 13px; margin-top: 8px; }
+ .service-row > .icon { width: 43px; height: 43px; padding: 11px; }
+ .place-section { padding-block: 55px 45px; }
+ .place-section .section-heading p { margin-top: 22px; font-size: 14px; }
+ .place-layout { grid-template-columns: 1fr; gap: 30px; margin-top: 30px; }
+ .place-side { margin-top: 0; padding-left: 45px; }
+ .place-side .button { margin-top: 25px; font-size: 13px; }
+ .instagram-line { display: block; margin-top: 35px; padding-top: 20px; font-size: 13px; }
+ .instagram-line > span { display: block; }
+ .instagram-line > a { margin-top: 10px; }
 }
 @media (max-width: 360px) {
-  .hero-copy h1 { font-size: 91px; }
-  .hero-location { font-size: 31px; }
-  .hero-actions { gap: 16px; }
-  .hero-actions .button { padding-inline: 16px; gap: 15px; }
-  .hero-actions .text-link { font-size: 12px; gap: 12px; }
-  .people-copy h2 { font-size: 64px; }
+ .hero-intro { display: block; }
+ .hero-intro .button { margin-top: 20px; }
+ .hero-intro p { font-size: 13px; }
+ .service-row { gap: 12px; }
+ .service-row h3 { font-size: 25px; }
+ .service-row p { font-size: 12px; }
+ .service-row > .icon { width: 38px; height: 38px; padding: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .fashion-hero *, .home-people *, .home-offer *, .home-salon * { animation: none !important; transition: none !important; }
+ .brand-hero *, .people-section *, .offer-section *, .place-section * { animation: none !important; transition: none !important; }
 }

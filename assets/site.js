@@ -67,6 +67,39 @@
     root.classList.add('js-motion');
   }
 
+  // The team is a native horizontal portrait strip on small screens. Every
+  // portrait remains a real link; controls supplement touch and keyboard use.
+  const deck = document.querySelector('.portrait-deck');
+  if (deck) {
+    const cards = [...deck.querySelectorAll('.portrait-card')];
+    const previous = document.querySelector('.portrait-back');
+    const next = document.querySelector('.portrait-next');
+    const position = document.querySelector('.portrait-position');
+    let selected = 0;
+    let portraitFrame = 0;
+    const updatePortraits = () => {
+      portraitFrame = 0;
+      const start = deck.getBoundingClientRect().left + 20;
+      selected = cards.reduce((closest, card, index) =>
+        Math.abs(card.getBoundingClientRect().left - start) <
+        Math.abs(cards[closest].getBoundingClientRect().left - start) ? index : closest, 0);
+      position.textContent = `${String(selected + 1).padStart(2, '0')} — ${String(cards.length).padStart(2, '0')}`;
+      previous.disabled = deck.scrollLeft < 2;
+      next.disabled = deck.scrollLeft >= deck.scrollWidth - deck.clientWidth - 2;
+    };
+    const movePortrait = direction => {
+      const target = cards[Math.max(0, Math.min(cards.length - 1, selected + direction))];
+      deck.scrollBy({ left: target.getBoundingClientRect().left - deck.getBoundingClientRect().left - 20, behavior: paused ? 'instant' : 'smooth' });
+    };
+    previous.addEventListener('click', () => movePortrait(-1));
+    next.addEventListener('click', () => movePortrait(1));
+    deck.addEventListener('scroll', () => {
+      if (!portraitFrame) portraitFrame = requestAnimationFrame(updatePortraits);
+    }, { passive: true });
+    addEventListener('resize', updatePortraits);
+    updatePortraits();
+  }
+
 })();
 
 // Gallery links work as original image links when JavaScript is disabled.

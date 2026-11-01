@@ -1,68 +1,69 @@
-# Redesign: Haar, Menschen und Salon
+# Gestaltung: der Name, das Haar und die Menschen
 
-## Ausgangslage und Entscheidung
+## Ausgangslage
 
-Die bisherige Startseite zeigte eine grosse Salonansicht, mehrere auswählbare
-Vorschaubilder und das Team gleichzeitig. Das wirkte wie eine Bildverwaltung und
-wiederholte die Salon-Galerie. Die neue Startseite verzichtet vollständig auf
-diese Steuerung und erzählt in vier Abschnitten: Coiffure, Team, Angebot und Salon.
+Der vorige Entwurf orientierte sich weiter an vorhandenen Modelaufnahmen. Das
+passte nicht zum gewünschten eigenständigen Auftritt. Die neue Gestaltung setzt
+beim Namen Lüthi an: grosse, offene Sans-Serif-Typografie und ein abstraktes
+Haar-Stillleben als grafischer Einstieg. Die vorhandenen Inspirationsbilder
+werden auf keiner Seite eingesetzt.
 
-## Gemeinsame Gestaltung
+## Gestaltung über alle Seiten
 
-Antonio in grossen Versalien prägt Titel und Abschnittsüberschriften. Manrope
-bleibt die gut lesbare Schrift für Texte, Namen, Preise und Navigation. Beide
-Schriften werden lokal mitgeliefert. Anthrazit und gebrochenes Weiss bilden die
-Oberfläche; ausschliesslich der Lüthi-Schriftzug ist gelb. Der Teamabschnitt setzt
-einen hellen Kontrast. Alle vier Seiten teilen Navigation, Typografie, Abstände,
-Bedienelemente und den direkten telefonischen Kontaktabschluss.
+Gebrochenes Weiss, dunkles Aubergine und helles Flieder. Gelb bleibt ausschliesslich
+im Lüthi-Schriftzug. Manrope wird lokal in drei Gewichten ausgeliefert. Eine
+schwebend wirkende, abgerundete Navigation, runde Aktionslinks und grosszügige
+Abstände verbinden Startseite, Preise, Team und Salon. Die Preisgruppen stehen
+in ruhigen hellen Flächen; die Salon-Galerie zeigt Originale mit natürlichen
+Proportionen. Der gemeinsame Kontaktabschluss bietet Telefon, Adresse, E-Mail
+und Routenlink.
 
-Der Einstieg zeigt eine einzelne Schwarzweiss-Frisurenaufnahme aus dem vorhandenen
-Bildbestand, ausdrücklich als «Frisureninspiration» gekennzeichnet. Keine neue
-KI-Aufnahme, keine Behauptung einer Salonarbeit. Team und Salon bleiben originale,
-unveränderte Fotografien. Alle Bilder behalten ihre natürlichen Proportionen;
-kein Scroll-Zoom oder erzwungener Ausschnitt.
+Das Haar-Stillleben wurde für diese Demo mit KI generiert. Es zeigt weder Menschen
+noch den Salon und ist keine Behauptung einer eigenen Salonarbeit. Seine zwei
+WebP-Grössen werden responsiv ausgeliefert; die kleine Datei hat etwa 39 KB.
+Alle bestehenden Bilddateien bleiben unverändert.
 
-Das echte Gruppenfoto erhält einen eigenen Abschnitt mit den fünf bekannten
-Vornamen. Die Leistungen führen direkt zu den bestehenden Preisgruppen. Die
-Salonszene auf der Startseite verweist zur Galerie mit Aussenansicht und weiteren
-Originalaufnahmen. Instagram bleibt ein kompakter Link zum bestätigten Profil.
+## Team
 
-## Inhalte
+Auf dem Desktop erscheinen fünf echte Einzelporträts in einer versetzten Reihe.
+Auf Smartphones wird daraus eine nativ wischbare Folge mit sichtbarem Ansatz des
+nächsten Bildes. Pfeilbuttons und Zähler ergänzen diese Bedienung. Alle Personen
+bleiben als Links erreichbar; keine automatische Rotation und keine zusätzlichen
+Vorschaubilder. Jede Person führt zu ihrem eigenen Anker auf der Teamseite.
 
-Coiffure Lüthi, Wohlen, seit 1987. Öffentliche Ansprache: Sie. Team, Rollen,
-Kontaktangaben und elf Preispositionen stammen aus dem vorhandenen Repository.
-Öffnungszeiten und persönliche Zukunftspläne werden nicht veröffentlicht. Die
-bestehenden Preisbezeichnungen und der Bestätigungsvorbehalt bleiben erhalten.
-Keine neuen Spezialisierungen, Werbeversprechen oder erfundenen Angaben.
+Die Teamseite verwendet grosse, nummerierte Porträtzeilen mit vollständigem Namen
+und bestehender Funktion. Sie ergänzt die persönliche Startseite, statt das alte
+Kartengitter zu wiederholen. Porträts behalten ihre natürlichen Proportionen.
 
-Ein dynamischer Instagram-Feed ist nicht angeschlossen: Das bestätigte Profil
-@coiffureluethi ist ein persönliches Konto; eine offizielle automatische
-Anbindung erfordert ein professionelles Konto und Autorisierung.
+## Verbindliche Inhalte
+
+Coiffure Lüthi, Wohlen, seit 1987. Ansprache Sie. Alle fünf Teammitglieder, Rollen,
+Kontaktdaten und elf Preispositionen stammen aus dem vorhandenen Repository.
+Öffnungszeiten und persönliche Zukunftspläne werden nicht veröffentlicht. Der
+bestehende Preis-Bestätigungsvorbehalt bleibt erhalten. Keine erfundenen Angaben.
+Instagram bleibt ein Link zum bestätigten persönlichen Konto @coiffureluethi;
+ein dynamischer Feed ist ohne offizielle Autorisierung nicht angeschlossen.
 
 ## Bewegung und Bedienung
 
-Titel und Bildmaske bauen den Einstieg auf. Abschnitte und Originalfotos blenden
-beim Scrollen ein, ohne die Bilder zu verschieben oder zu skalieren. Die
-Bildmasken beobachten ungeclippte Rahmen, damit Inhalte zuverlässig erscheinen.
-Die Betriebssystemeinstellung für reduzierte Bewegung und die im Footer
-gespeicherte Animationspause werden berücksichtigt. Ohne JavaScript bleiben
-Inhalte und Navigation sichtbar und Galeriebilder als direkte Links nutzbar.
+Der Name fährt beim Einstieg aus einer Textmaske, das Haarmotiv blendet mit einer
+Maske ein. Abschnitte und Porträts erscheinen beim Scrollen. Die Originalfotos
+werden nicht vergrössert oder verschoben. Reduzierte Bewegung des Betriebssystems
+und die gespeicherte Animationspause werden berücksichtigt. Ohne JavaScript
+bleiben Navigation, Inhalte, horizontales Scrollen und Galeriebildlinks nutzbar.
+Menü mit Escape und eindeutiger Beschriftung, Galerie mit Pfeiltasten, Escape und
+Fokusrückgabe. Sprunglinks berücksichtigen den festen Header.
 
-Das mobile Menü hat einen eindeutigen Öffnen-/Schliessen-Zustand und schliesst
-mit Escape. Die Salon-Galerie unterstützt Pfeiltasten, Escape und Fokusrückgabe.
-Preis-Sprunglinks berücksichtigen den festen Header. Ein mobiler Anruf-Link
-bleibt erreichbar; Telefonnummer und Adresse stehen im gemeinsamen Kontaktblock.
+## Prüfung und Veröffentlichung
 
-## Technik und Prüfung
+Statische Seiten, keine neuen Laufzeitdienste oder Paketabhängigkeiten. CSS und
+JavaScript erhalten beim Build Inhalts-Hashes. Domain-Wurzel und Pages-Projektpfad
+bleiben kompatibel. Veröffentlichung der Demo über den bestehenden Pages-Workflow;
+die originale Salon-Website ausserhalb des Repositorys bleibt unberührt.
 
-Statische HTML-Seiten ohne Framework oder kostenpflichtige Dienste. Startseiten-
-Layout in `assets/home.css`, gemeinsame Gestaltung in `assets/site.css`. Beide
-Stylesheets und das Skript erhalten beim Build Inhalts-Hashes. Domain-Wurzel
-und GitHub-Pages-Projektpfad werden unterstützt.
-
-Prüfumfang: Builds und lokale Referenzen in beiden Pfadvarianten; alle vier Seiten
-bei 320, 375, 390, 768, 1440 und 1920 Pixeln; Bild-/Font-Ladung, Überläufe, mobiles
-Menü, Preislinks, Galerie und Nutzung ohne JavaScript. Zusätzliche Kontrolle der
-Bildproportionen, Einblendungen und gespeicherten Animationspause. Team- und
-Salon-Bilddateien bleiben unverändert. Die originale Salon-Website ausserhalb
-des Repositorys wird nicht verändert.
+Geprüft: alle vier Seiten bei 320, 375, 390, 768, 1440 und 1920 Pixeln; Bilder,
+Fonts, Überläufe, Menü, FAQ, Preislinks, Galerie und Nutzung ohne JavaScript.
+Zusätzlich Porträtsteuerung, Zähler, Endzustände, Personen-Anker, Einblendungen,
+unverzerrte Salonbilder, reduzierte Bewegung und gespeicherte Animationspause.
+Die elf Preise und die fünf Original-Porträtzuordnungen wurden mit dem vorherigen
+Stand verglichen.

@@ -1,0 +1,1 @@
+Abstraktes Haar-Stillleben, KI-generiert am 1. November 2026 für die Website-Demo. Keine Person, keine Salonaufnahme und keine dargestellte Salonarbeit. Original: exec-e7a5d11f-45bd-4d0b-b9aa-1135e326a18f.png. WebP-Versionen dienen der responsiven Auslieferung.
