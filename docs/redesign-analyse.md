@@ -32,7 +32,7 @@ nächsten Bildes. Pfeilbuttons und Zähler ergänzen diese Bedienung. Alle Perso
 bleiben als Links erreichbar; keine automatische Rotation und keine zusätzlichen
 Vorschaubilder. Jede Person führt zu ihrem eigenen Anker auf der Teamseite.
 
-Die Teamseite verwendet grosse, nummerierte Porträtzeilen mit vollständigem Namen
+Die Teamseite verwendet grosse Porträtzeilen mit vollständigem Namen
 und bestehender Funktion. Sie ergänzt die persönliche Startseite, statt das alte
 Kartengitter zu wiederholen. Porträts behalten ihre natürlichen Proportionen.
 
@@ -63,8 +63,21 @@ bleiben kompatibel. Veröffentlichung der Demo über den bestehenden Pages-Workf
 die originale Salon-Website ausserhalb des Repositorys bleibt unberührt.
 
 Geprüft: alle vier Seiten bei 320, 375, 390, 768, 1440 und 1920 Pixeln; Bilder,
-Fonts, Überläufe, Menü, FAQ, Preislinks, Galerie und Nutzung ohne JavaScript.
+Fonts, Überläufe, Menü, Preislinks, Galerie und Nutzung ohne JavaScript.
 Zusätzlich Porträtsteuerung, Zähler, Endzustände, Personen-Anker, Einblendungen,
 unverzerrte Salonbilder, reduzierte Bewegung und gespeicherte Animationspause.
 Die elf Preise und die fünf Original-Porträtzuordnungen wurden mit dem vorherigen
 Stand verglichen.
+
+## Sprache und Lesbarkeit
+
+Die Überschriften nennen direkt den Inhalt: Unser Team, Unser Angebot und Unser
+Salon. Werbesätze, Abschnittsnummern, der Bildbutton und wiederholte Bildadressen
+entfallen. Instagram ist als Profil-Link benannt. Der Preishinweis bleibt sichtbar
+und behält den Bestätigungsvorbehalt, ohne zusätzliche Termin-FAQ.
+
+Überschriften haben weniger enge Laufweite. Kleine Texte, Menü und Preiszeilen
+sind grösser. Auf Smartphones zeigt die Teamseite grosse vollständige Porträts
+mit Name und Funktion darunter; die bisherigen 100-Pixel-Bilder entfallen.
+Die schwebende Telefonleiste ist entfernt. Der Einstieg ermöglicht einen direkten
+Anruf, die Navigation führt auf jeder Seite zum gemeinsamen Kontaktbereich.

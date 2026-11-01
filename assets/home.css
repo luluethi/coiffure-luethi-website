@@ -2,22 +2,17 @@
 .brand-hero { padding-top: 34px; }
 .hero-top { display: grid; grid-template-columns: 1.7fr 1fr; align-items: end; gap: 35px; margin-bottom: 30px; }
 .hero-name { display: block; overflow: hidden; padding-block: 8px 22px; margin-bottom: -22px; }
-.hero-name > span { display: block; font-size: clamp(76px, 10.4vw, 150px); font-weight: 600; letter-spacing: -.075em; line-height: 1.05; margin-left: -.045em; }
-.hero-location { display: block; font-size: clamp(64px, 8.7vw, 126px); letter-spacing: -.075em; line-height: 1.1; margin-top: 8px; }
+.hero-name > span { display: block; font-size: clamp(76px, 10.4vw, 150px); font-weight: 600; letter-spacing: -.055em; line-height: 1.05; margin-left: -.045em; }
+.hero-location { display: block; font-size: clamp(64px, 8.7vw, 126px); letter-spacing: -.055em; line-height: 1.1; margin-top: 8px; }
 .hero-intro { justify-self: end; padding-bottom: 5px; }
 .hero-intro p { font-size: 16px; line-height: 1.7; margin-bottom: 28px; }
 .hero-art { position: relative; aspect-ratio: 2.75; border-radius: 160px 20px 20px 20px; overflow: hidden; background: #b8aeb8; }
 .hero-art picture { display: block; height: 100%; }
 .hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 51%; }
-.round-link { position: absolute; right: 35px; bottom: 30px; width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: var(--surface); border-radius: 50%; text-align: center; color: var(--ink); font-size: 11px; line-height: 1.5; transition: background .3s, border-radius .3s; }
-.round-link > span:last-child { font-size: 27px; transition: transform .3s; }
-.round-link:hover { border-radius: 35%; background: var(--paper); }
-.round-link:hover > span:last-child { transform: translateY(5px); }
-.hero-baseline { display: flex; justify-content: space-between; align-items: center; gap: 25px; padding-block: 18px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.hero-baseline { display: flex; justify-content: end; align-items: center; gap: 25px; padding-block: 18px; border-bottom: 1px solid var(--line); font-size: 15px; }
 .hero-baseline > a { display: flex; align-items: center; gap: 30px; min-height: 44px; }
 .hero-baseline .icon { width: 17px; height: 17px; }
 .people-section { padding-block: 95px 65px; }
-.section-heading > .eyebrow { margin-bottom: 30px; }
 .section-heading > div { display: flex; justify-content: space-between; align-items: end; gap: 50px; }
 .section-heading .text-link { margin-bottom: 6px; }
 .section-heading h2 { font-size: clamp(44px, 5vw, 72px); }
@@ -34,14 +29,12 @@
 .offer-section { background: var(--ink); color: var(--paper); padding-block: 80px; border-radius: 48px 48px 0 0; }
 .offer-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
 .offer-intro { position: sticky; top: 130px; align-self: start; }
-.offer-intro .eyebrow { margin-bottom: 40px; color: #c5b9cb; }
 .offer-intro h2 { font-size: clamp(60px, 7vw, 100px); }
 .offer-intro > .text-link { margin-top: 35px; }
 .service-list { border-top: 1px solid #7d6d85; }
 .service-row { display: flex; align-items: center; gap: 25px; border-bottom: 1px solid #66566d; padding-block: 32px; }
-.service-number { align-self: start; padding-top: 6px; font-size: 11px; color: #c5b9cb; }
 .service-row h3 { font-size: 36px; }
-.service-row p { color: #c5b9cb; font-size: 14px; margin-top: 10px; }
+.service-row p { color: #c5b9cb; font-size: 15px; margin-top: 10px; }
 .service-row > .icon { margin-left: auto; width: 49px; height: 49px; border: 1px solid #8c7d93; padding: 13px; border-radius: 50%; transition: background .3s, color .3s, transform .3s; }
 .service-row:hover > .icon { transform: rotate(45deg); background: var(--surface); color: var(--ink); }
 .place-section { padding-block: 95px 65px; }
@@ -63,8 +56,8 @@
  .hero-top { grid-template-columns: 1.4fr 1fr; }
  .hero-name > span { font-size: 10vw; }
  .hero-location { font-size: 8.5vw; }
- .hero-intro p { font-size: 14px; }
- .hero-intro .button { font-size: 12px; gap: 24px; padding-inline: 20px; }
+ .hero-intro p { font-size: 16px; }
+ .hero-intro .button { font-size: 14px; gap: 24px; padding-inline: 20px; }
  .hero-art { aspect-ratio: 2.35; }
  .portrait-deck { gap: 16px; }
  .portrait-caption h3 { font-size: 17px; }
@@ -81,18 +74,15 @@
  .hero-name > span { font-size: 18vw; }
  .hero-location { font-size: 16.8vw; margin-top: 5px; }
  .hero-intro { justify-self: stretch; padding: 0; }
- .hero-intro p { font-size: 15px; margin: 0; }
- .hero-intro .button { font-size: 13px; padding: 13px 20px; gap: 30px; min-height: 50px; margin-top: 20px; }
+ .hero-intro p { font-size: 16px; margin: 0; }
+ .hero-intro .button { font-size: 14px; padding: 13px 20px; gap: 30px; min-height: 50px; margin-top: 20px; }
  .hero-intro .icon { width: 17px; height: 17px; }
  .hero-art { aspect-ratio: 1.18; border-radius: 85px 12px 12px 12px; }
  .hero-art img { object-position: 64% 50%; }
- .round-link { width: 87px; height: 87px; right: 15px; bottom: 15px; font-size: 9px; gap: 2px; }
- .round-link > span:last-child { font-size: 22px; }
- .hero-baseline { font-size: 10px; gap: 15px; padding-block: 12px; }
+ .hero-baseline { font-size: 14px; gap: 15px; padding-block: 12px; }
  .hero-baseline > a { gap: 12px; }
  .hero-baseline .icon { width: 15px; height: 15px; }
  .people-section { padding-block: 55px 45px; overflow: hidden; }
- .section-heading > .eyebrow { font-size: 10px; margin-bottom: 22px; }
  .section-heading > div { display: block; }
  .section-heading h2 { font-size: clamp(36px, 9.6vw, 62px); }
  .section-heading .text-link { margin-top: 20px; margin-bottom: 0; }
@@ -102,38 +92,36 @@
  .portrait-card:nth-child(even) { margin-top: 0; }
  .portrait-caption h3 { font-size: 25px; }
  .portrait-caption { padding-top: 16px; }
- .portrait-tools { display: flex; justify-content: space-between; align-items: center; gap: 15px; font-size: 11px; margin-top: 5px; }
+ .portrait-tools { display: flex; justify-content: space-between; align-items: center; gap: 15px; font-size: 14px; margin-top: 5px; }
  .portrait-tools > div { display: none; gap: 8px; }
  .js-nav .portrait-tools > div { display: flex; }
  .portrait-tools button { border: 1px solid var(--ink); width: 44px; height: 44px; padding: 0; background: transparent; color: var(--ink); border-radius: 50%; font-size: 20px; }
  .portrait-tools button:disabled { opacity: .3; cursor: default; }
- .portrait-hint { margin-left: auto; margin-right: 10px; color: var(--muted); }
  .offer-section { padding-block: 50px; border-radius: 28px 28px 0 0; }
  .offer-layout { grid-template-columns: 1fr; gap: 40px; }
  .offer-intro { position: static; }
- .offer-intro .eyebrow { margin-bottom: 25px; font-size: 10px; }
  .offer-intro h2 { font-size: 70px; }
  .offer-intro > .text-link { margin-top: 25px; }
  .service-row { padding-block: 25px; gap: 18px; }
  .service-row h3 { font-size: 28px; }
- .service-row p { font-size: 13px; margin-top: 8px; }
+ .service-row p { font-size: 15px; margin-top: 8px; }
  .service-row > .icon { width: 43px; height: 43px; padding: 11px; }
  .place-section { padding-block: 55px 45px; }
- .place-section .section-heading p { margin-top: 22px; font-size: 14px; }
+ .place-section .section-heading p { margin-top: 22px; font-size: 16px; }
  .place-layout { grid-template-columns: 1fr; gap: 30px; margin-top: 30px; }
  .place-side { margin-top: 0; padding-left: 45px; }
- .place-side .button { margin-top: 25px; font-size: 13px; }
- .instagram-line { display: block; margin-top: 35px; padding-top: 20px; font-size: 13px; }
+ .place-side .button { margin-top: 25px; font-size: 14px; }
+ .instagram-line { display: block; margin-top: 35px; padding-top: 20px; font-size: 15px; }
  .instagram-line > span { display: block; }
  .instagram-line > a { margin-top: 10px; }
 }
 @media (max-width: 360px) {
  .hero-intro { display: block; }
  .hero-intro .button { margin-top: 20px; }
- .hero-intro p { font-size: 13px; }
+ .hero-intro p { font-size: 16px; }
  .service-row { gap: 12px; }
  .service-row h3 { font-size: 25px; }
- .service-row p { font-size: 12px; }
+ .service-row p { font-size: 15px; }
  .service-row > .icon { width: 38px; height: 38px; padding: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {

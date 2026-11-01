@@ -46,7 +46,7 @@ Model-/Inspirationsaufnahmen prägen das Design nicht mehr. Danach folgen fünf
 versetzt angeordnete Originalporträts, das Angebot und echte Aussen-/Innenansichten.
 Auf Smartphones ist die Porträtfolge nativ wischbar und zusätzlich mit Pfeilen
 bedienbar. Jedes Foto führt zur zugehörigen Person auf der Teamseite. Dort zeigt
-eine nummerierte Porträtliste die vollständigen Namen und bestehenden Rollen.
+eine Porträtliste die vollständigen Namen und bestehenden Rollen.
 
 Keine automatische Diashow oder Vorschaubild-Leiste. Team- und Salonfotos behalten
 ihre natürlichen Seitenverhältnisse; kein Scroll-Zoom oder erzwungener Ausschnitt.
@@ -54,8 +54,8 @@ ihre natürlichen Seitenverhältnisse; kein Scroll-Zoom oder erzwungener Ausschn
 Bewegung wird bei entsprechender Betriebssystemeinstellung reduziert und lässt
 sich im Footer pausieren. Die lokale Präferenz wird gespeichert. Ohne JavaScript
 bleiben Inhalte, Navigation und Galerie-Link sichtbar. Galerie-Dialog mit
-Tastatursteuerung, Escape und Fokusrückgabe. Preis-Sprunglinks berücksichtigen
-den festen Header.
+Tastatursteuerung, Escape und Fokusrückgabe. Preis- und Kontakt-Sprunglinks berücksichtigen den festen Header. Das Menü
+führt zum gemeinsamen Kontaktbereich; eine schwebende Telefonleiste entfällt.
 
 ## Inhalte und Dateien
 
