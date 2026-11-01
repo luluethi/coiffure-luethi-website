@@ -40,7 +40,7 @@ Kartengitter zu wiederholen. Porträts behalten ihre natürlichen Proportionen.
 
 Coiffure Lüthi, Wohlen, seit 1987. Ansprache Sie. Alle fünf Teammitglieder, Rollen,
 Kontaktdaten und elf Preispositionen stammen aus dem vorhandenen Repository.
-Öffnungszeiten stehen ausschliesslich im Kontaktbereich der Salonseite:
+Öffnungszeiten stehen in den Kontaktbereichen der Start- und Salonseite:
 Dienstag–Freitag 08:00–12:00 und 13:30–18:30, Samstag 07:30–14:00, Montag und
 Sonntag geschlossen. Quelle ist der vom Auftraggeber bereitgestellte Screenshot.
 Persönliche Zukunftspläne werden nicht veröffentlicht. Der

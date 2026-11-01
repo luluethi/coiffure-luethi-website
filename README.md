@@ -62,7 +62,7 @@ führt zum gemeinsamen Kontaktbereich; eine schwebende Telefonleiste entfällt.
 [Designsystem und Prüfung](docs/redesign-analyse.md) dokumentieren die aktuelle
 Komposition. Team, Rollen, Kontakt und elf Preispositionen basieren auf dem
 vorhandenen Repository. Preise behalten den bestehenden Bestätigungsvorbehalt.
-Öffnungszeiten stehen ausschliesslich im Kontaktbereich der Salonseite und
+Öffnungszeiten stehen in den Kontaktbereichen der Start- und Salonseite und
 stammen aus dem vom Auftraggeber bereitgestellten Screenshot. Preisbezeichnungen
 werden nicht zusätzlich erklärt. Persönliche Zukunftspläne werden nicht veröffentlicht.
 
